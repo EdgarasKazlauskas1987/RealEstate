@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+ <img src="@Url.Content("~/Content/Images/background1.jpg")" name="slide" id="nuotrauka" style="width:100%" height="300"/>
+
+
+<script type="text/javascript">
+
+    var step = 1
+    function slideit() {
+        document.images.slide.src=eval("image"+step+".src")
+    
+    if(step<4)
+        step++
+    else
+        step = 1
+    setTimeout("slideit()", 3500)
+    }
+    slideit()
+
+</script>
+<div>
+    <textarea id="text-area-no-max-width" rows="5" cols="200">
+        Allie Mae Burroughs, Wife of a Cotton Sharecropper, Hale County, Alabama,a 1936 photograph taken by Walker Evans during his work for the Farm SecurityAdministration. Much of Evans's work documenting the effects of the Great Depression,including this photograph, used a large-format, 8x10-inch camera. Evans described hisgoal as making pictures that are "literate, authoritative, transcendent".
+    </textarea>
+</div>
+
+<div class="row" id="div-with-buttons"> 
+    <div class="col-md-4">     
+        <a class="btn btn-default" id="circle-button" href="@Url.Action("Index", "Projects")">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Projects)</div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-default" id="circle-button" href="#">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Services)</div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-default" id="circle-button" href="@Url.Action("InquiryForm", "Home")">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.ContactUs)</div>
+        </a>
+    </div>
+</div>

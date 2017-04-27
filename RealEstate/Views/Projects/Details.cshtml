@@ -1,0 +1,69 @@
+﻿@model RealEstate.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfBuilding)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInformation)
+        </dd>
+    </dl>
+
+    @{  
+        foreach(var item in ViewBag.ProgList)
+        {
+            //get byte array of image in `model.Image'
+            //convert byte array to base64 string, if we want
+            var base64 = Convert.ToBase64String(item);
+            //convert base64 string to image format and store into imgSrc
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            <img class="detailsImage" src='@imgSrc' />
+        }
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
