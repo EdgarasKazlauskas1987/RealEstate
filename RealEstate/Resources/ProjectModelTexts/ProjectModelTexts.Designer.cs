@@ -79,11 +79,29 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Foto.
+        /// </summary>
+        public static string Foto {
+            get {
+                return ResourceManager.GetString("Foto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Price.
         /// </summary>
         public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

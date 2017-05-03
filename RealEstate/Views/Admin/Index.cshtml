@@ -3,8 +3,29 @@
     ViewBag.Title = "Index";
 }
 
-<div>
+<div class="row" id="admin-buttons">
 
-@Html.Partial("_AdminFooter")
-</div>
+    <div class="col-md-4">
+        <a class="btn btn-success" id="ordinary-button" href="@Url.Action("Index", "ApplicationUsers")">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
+                                      AdminManagementTexts.ManageUsers)</div>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a class="btn btn-success" id="ordinary-button" href="@Url.Action("Index", "Projects")">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
+                                      AdminManagementTexts.ManageProjects)</div>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a class="btn btn-success" id="ordinary-button" href="@Url.Action("Index", "Projects")">
+            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
+                                     AdminManagementTexts.ContactUsers)</div>
+        </a>
+    </div>
+
+
+    </div>
 

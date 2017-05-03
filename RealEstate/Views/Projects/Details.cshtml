@@ -9,7 +9,61 @@
 <div>
     <h4>Project</h4>
     <hr />
+
+    @{
+        var list = ViewBag.ProgList;
+        if (list.Count != 0)
+        {
+
+            <div class="w3-content w3-display-container">
+
+                @{
+                    foreach (var item in ViewBag.ProgList)
+                    {
+                        var base64 = Convert.ToBase64String(item);
+                        //convert base64 string to image format and store into imgSrc
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        <img class="mySlides" src='@imgSrc' width="300" height="250" />
+                    }
+
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                }
+            </div>
+                    }
+    }
+    
+
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+    </script>
+
+    
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
         <dt>
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
         </dt>

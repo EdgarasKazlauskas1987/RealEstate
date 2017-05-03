@@ -27,8 +27,8 @@ textarea {
     background-color:#02733D;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-.btn {
+/*
+    .btn {
   display:block;
   height: 200px;
   width: 200px;
@@ -36,6 +36,7 @@ textarea {
   border: 10px solid white;
   
 }
+*/
 
 #circle-button {
     background-color:#02733D;
@@ -43,6 +44,11 @@ textarea {
     text-align:center;
     align-items: center;
     padding-top: 75px;
+    display:block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid white;
 }
 #div-with-button {
    /* text-align:center; */
@@ -67,4 +73,21 @@ textarea {
 #white-color-li {
     background-color: chartreuse;
 }
+
+#ordinary-button {
+    margin:auto;
+    text-align:center;
+    align-items: center;
+    padding-top: 40px;
+    display:block;
+    height: 120px;
+    width: 250px;
+}
+
+#admin-buttons {
+    padding-top: 40px;
+}
+
+
+
 

@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace RealEstate.Models
 {
     public class Project
     {
         public int ProjectId { get; set; }
+
+        public string Title { get; set; }
+
+        public string Address { get; set; }
 
         public string TypeOfBuilding { get; set; }
 
@@ -17,7 +22,15 @@ namespace RealEstate.Models
 
         public int Area { get; set; }
 
+        public int PlotArea { get; set; }
+
+        public int NumberOfFloors { get; set; }
+
+        public int NumberOfRooms { get; set; }
+
         public decimal Price { get; set; }
+
+        public string AdditionalFacilities { get; set; }
 
         public string AdditionalInformation { get; set; }
 

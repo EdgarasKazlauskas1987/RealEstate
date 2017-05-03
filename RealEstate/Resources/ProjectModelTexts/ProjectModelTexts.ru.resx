@@ -123,8 +123,14 @@
   <data name="AreaSize" xml:space="preserve">
     <value>Площадь (М²)</value>
   </data>
+  <data name="Foto" xml:space="preserve">
+    <value>Фото</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>Цена</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Hазвания</value>
   </data>
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Тип Здания</value>

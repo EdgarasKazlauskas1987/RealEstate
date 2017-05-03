@@ -99,3 +99,7 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.resources
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.lt.resources
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.ru.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.AdminManagementTexts.AdminManagementTexts.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.AdminManagementTexts.AdminManagementTexts.lt.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.AdminManagementTexts.AdminManagementTexts.ru.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.AdditionalProjectFields.resources

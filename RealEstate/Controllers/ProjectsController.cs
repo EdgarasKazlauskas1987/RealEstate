@@ -19,6 +19,9 @@ namespace RealEstate.Controllers
         // GET: Projects
         public ActionResult Index()
         {
+            var listOfImages = db.Images;
+            ViewBag.ImagesList = listOfImages;
+
             return View(db.Projects.ToList());
         }
 
@@ -57,7 +60,7 @@ namespace RealEstate.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProjectId,TypeOfBuilding,Year,Area,Price,AdditionalInformation")] Project project,
+        public ActionResult Create([Bind(Include = "ProjectId,Title,Address,TypeOfBuilding,Year,Area,PlotArea,NumberOfFloors,NumberOfRooms,Price,AdditionalFacilities,AdditionalInformation")] Project project,
             IEnumerable<HttpPostedFileBase> images)
         {
             if (ModelState.IsValid)
@@ -139,6 +142,11 @@ namespace RealEstate.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Project project = db.Projects.Find(id);
+            var Images = db.Images.Where(x => x.ProjectBelongsId == project.ProjectId);
+            foreach(var item in Images)
+            {
+                db.Images.Remove(item);
+            }
             db.Projects.Remove(project);
             db.SaveChanges();
             return RedirectToAction("Index");

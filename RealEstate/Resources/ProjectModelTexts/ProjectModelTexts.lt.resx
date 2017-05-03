@@ -123,8 +123,14 @@
   <data name="AreaSize" xml:space="preserve">
     <value>Plotas (m²)</value>
   </data>
+  <data name="Foto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>Kaina</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Pavadinimas</value>
   </data>
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Pastato Tipas</value>

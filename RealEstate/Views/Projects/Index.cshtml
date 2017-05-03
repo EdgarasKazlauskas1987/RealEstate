@@ -12,6 +12,12 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Foto)
+        </th>
+        <th>
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Title)
+        </th>
+        <th>
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
         </th>
         <th>
@@ -30,40 +36,70 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+
+    <tr> 
+            <td>
+                @{
+                    var listOfStrings = new List<byte[]>();
+                    if (ViewBag.ImagesList != null)
+                    {
+                        foreach (var image in ViewBag.ImagesList)
+                        {
+                            if (image.ProjectBelongsId == item.ProjectId)
+                            {
+                                listOfStrings.Add(image.ImageData);
+                            }
+                        }
+                        if (listOfStrings.Count != 0)
+                        {
+                            var firstImage = listOfStrings.First<byte[]>();
+                            var base64 = Convert.ToBase64String(firstImage);
+                            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+                            <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
+                                <img src='@imgSrc' style="width:180px;height:140px;" />
+                            </a>
+                        }
+                    }
+                }
+            </td>
+            <td>
+                <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </a>
+            </td>
+            <td>
             @Html.DisplayFor(modelItem => item.TypeOfBuilding)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Year)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Area)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdditionalInformation)
-        </td>
-        <td>
-            @if (Request.IsAuthenticated == true)
-            {
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) 
-                
-            }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalInformation)
+            </td>
+            <td>
+                @if (Request.IsAuthenticated == true)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId })
 
-            @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+                }
 
-            @if(Request.IsAuthenticated == true)
-            {
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
-            }
-            
-           
-          
-        </td>
-    </tr>
+                @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+
+                @if (Request.IsAuthenticated == true)
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
+
+                }
+
+            </td>
+</tr>
 }
 
 </table>
