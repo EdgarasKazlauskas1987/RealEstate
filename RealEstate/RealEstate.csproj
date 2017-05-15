@@ -77,6 +77,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -129,6 +141,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -193,6 +209,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -203,6 +220,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,12 +236,32 @@
     <Compile Include="Migrations\201705031637435_AdditionalProjectFields.Designer.cs">
       <DependentUpon>201705031637435_AdditionalProjectFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705122046253_changeIntIntoString2.cs" />
+    <Compile Include="Migrations\201705122046253_changeIntIntoString2.Designer.cs">
+      <DependentUpon>201705122046253_changeIntIntoString2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705122048493_backToDecimal.cs" />
+    <Compile Include="Migrations\201705122048493_backToDecimal.Designer.cs">
+      <DependentUpon>201705122048493_backToDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705122118207_yearIntoString.cs" />
+    <Compile Include="Migrations\201705122118207_yearIntoString.Designer.cs">
+      <DependentUpon>201705122118207_yearIntoString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705122123200_priceIntoString.cs" />
+    <Compile Include="Migrations\201705122123200_priceIntoString.Designer.cs">
+      <DependentUpon>201705122123200_priceIntoString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Abstract\IProjectRepository.cs" />
+    <Compile Include="Models\Abstract\IRoleRepository.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InquiryFormModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Repositories\ProjectRepository.cs" />
+    <Compile Include="Models\Repositories\RoleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AdminManagementTexts\AdminManagementTexts.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -300,6 +338,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectModelTexts.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\ServicesTexts\ServicesTexts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServicesTexts.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ServicesTexts\ServicesTexts.lt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServicesTexts.lt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ServicesTexts\ServicesTexts.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServicesTexts.ru.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -312,9 +365,15 @@
     <Content Include="Content\Images\buildings2.jpg" />
     <Content Include="Content\Images\buildings3.jpg" />
     <Content Include="Content\Images\buildings4.jpg" />
+    <Content Include="Content\Images\CompanyLogo.png" />
     <Content Include="Content\Images\eng.png" />
+    <Content Include="Content\Images\F05JSPD.png" />
+    <Content Include="Content\Images\green-circle.png" />
+    <Content Include="Content\Images\inquirybackground.jpg" />
     <Content Include="Content\Images\lt.png" />
     <Content Include="Content\Images\ru.png" />
+    <Content Include="Content\Images\services.jpg" />
+    <Content Include="Content\Images\turnRight.png" />
     <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -388,6 +447,8 @@
     <Content Include="Views\ApplicationUsers\Details.cshtml" />
     <Content Include="Views\ApplicationUsers\Edit.cshtml" />
     <Content Include="Views\ApplicationUsers\Index.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -409,6 +470,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705031637435_AdditionalProjectFields.resx">
       <DependentUpon>201705031637435_AdditionalProjectFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705122046253_changeIntIntoString2.resx">
+      <DependentUpon>201705122046253_changeIntIntoString2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705122048493_backToDecimal.resx">
+      <DependentUpon>201705122048493_backToDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705122118207_yearIntoString.resx">
+      <DependentUpon>201705122118207_yearIntoString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705122123200_priceIntoString.resx">
+      <DependentUpon>201705122123200_priceIntoString.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AdminManagementTexts\AdminManagementTexts.lt.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -469,6 +542,18 @@
     <EmbeddedResource Include="Resources\ProjectModelTexts\ProjectModelTexts.ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjectModelTexts.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ServicesTexts\ServicesTexts.lt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServicesTexts.lt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ServicesTexts\ServicesTexts.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServicesTexts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ServicesTexts\ServicesTexts.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServicesTexts.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -12,11 +12,33 @@ namespace RealEstate.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+        private Random randomGenerator = new Random();
+
         public ActionResult Index()
         {
-            return View();
-        }
+            IEnumerable<Project> demo = db.Projects;
+            List<Project> allProjects = new List<Project>();
+            allProjects = demo.ToList();
+            List<Project> fourProjects = new List<Project>();
+            
 
+            for(int i = 0; i<4; i++)
+            {
+                var randomNumber = randomGenerator.Next(allProjects.Count());
+                fourProjects.Add(allProjects.ElementAt(randomNumber));
+                allProjects.Remove(allProjects.ElementAt(randomNumber));
+            }
+
+            var listOfImages = db.Images;
+
+            ViewBag.ImagesList = listOfImages;
+            ViewBag.FourRandomProjects = fourProjects;
+
+            return View();
+        } 
+       
         public ActionResult InquiryForm()
         {
             ViewBag.Message = "Your application description page.";

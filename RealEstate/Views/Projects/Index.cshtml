@@ -4,11 +4,54 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<script type="text/javascript">
+
+    function setInputFieldsToDefault()
+    {
+        document.getElementById("from-year-textbox").value = "";
+        document.getElementById("to-year-textbox").value = "";
+        document.getElementById("from-price-textbox").value = "";
+        document.getElementById("to-price-textbox").value = "";
+    }
+
+</script>
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @using (Html.BeginForm("Index", "Projects", FormMethod.Get))
+
+    {
+    <p>
+        <div id="search-inputs-div">
+           
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding) @Html.DropDownList("typeOfBuilding", RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.All)
+            <br />
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt) @Html.TextBox("fromYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-year-textbox" })
+            @Html.TextBox("toYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-year-textbox" })
+            <br />
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price) @Html.TextBox("fromPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-price-textbox" })
+            @Html.TextBox("toPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-price-textbox" })
+            <br />
+        </div>
+
+        @* <input type="submit" value="Filter" class="whatever"/> *@
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span>Search</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success btn-small btn-block" onclick="setInputFieldsToDefault()"> <span class="glyphicon glyphicon-remove-sign"></span>Clear All</button>
+
+            </div>
+
+
+        </div>
+    </p>
+
+    }
 </p>
+
+<script> </script>
 <table class="table">
     <tr>
         <th>

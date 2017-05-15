@@ -127,9 +127,21 @@
     <value>Свяжитесь с нами</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>е-мейл:</value>
+    <value>E-мейл:</value>
   </data>
   <data name="Telephone" xml:space="preserve">
     <value>Тел:</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Bаш Эл. адрес</value>
+  </data>
+  <data name="YourName" xml:space="preserve">
+    <value>Ваше имя</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Послать</value>
+  </data>
+  <data name="WriteToUs" xml:space="preserve">
+    <value>Напишите нам</value>
   </data>
 </root>

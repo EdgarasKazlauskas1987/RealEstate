@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.ServicesWeProvide)</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <ul>
+            <li class="list-of-services">
+                @Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.GeneralConstructionWorks)
+                <ul>
+                    <li class="ordinary">@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.InstallationOfFacades)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.InstallationOfFoundation)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.InstallationOfRoofStructures)</li>
+                </ul>
+            </li>
+
+
+            <li class="list-of-services">
+                @Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.DecorationWorks)
+                <ul>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.Plastering)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.InteriorPainting)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.FacadeDecoration)</li>
+                </ul>
+            </li>
+
+            <li class="list-of-services">
+                @Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.OutdoorUtility)
+                <ul>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.Landscaping)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.ConstructionOfFences)</li>
+                </ul>
+            </li>
+
+            <li class="list-of-services">
+                @Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.Design)
+                <ul>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.BuildingDesign)</li>
+                    <li>@Html.DisplayName(RealEstate.Resources.ServicesTexts.ServicesTexts.EngineeringNetworks)</li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="col-md-8" id="service-image-container">
+        <img src="~/Content/Images/services.jpg" alt="" width="730" height="450" />
+    </div>
+</div>
+

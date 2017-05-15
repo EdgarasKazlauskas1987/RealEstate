@@ -1,0 +1,38 @@
+﻿
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="~/Content/Site.less" />
+@Styles.Render("~/Content/Site.css")
+
+<div class="made-footer">
+   <div class="row" id="white-part-in-footer">
+       <div class="col-md-4">
+           <ul class="list-without-bullets">
+               <li><h3><b>@Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Address)</b></h3></li>
+               <li><address>
+                Draugystės g. 17<br />
+                LT-51229 Kaunas, Lietuva<br />
+                </address></li>
+           </ul>
+       </div>
+
+
+       <div class="col-md-4"> </div>
+       <div class="col-md-4">
+           <ul class="list-without-bullets">
+               <li><h3><b>@Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.ContactUs)</b></h3></li>
+               <li><p><span class="glyphicon glyphicon-phone"></span>  @Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Telephone) +370 65517150></p></li>
+               <li><p><span class="glyphicon glyphicon-envelope"></span>  @Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Email) <a href="mailto:info@ntverslas.lt">info@ntverslas.lt</a>></p></li>
+               
+
+           </ul>
+           
+
+       </div>
+
+
+   </div>
+    <div id="green-part-inside-footer">
+        Copyright &copy; Edgaras Kazlauskas
+    </div>
+
+</div>

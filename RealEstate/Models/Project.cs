@@ -18,7 +18,7 @@ namespace RealEstate.Models
         public string TypeOfBuilding { get; set; }
 
         [Required(ErrorMessage = "Specify the year when the building was built")]
-        public int Year { get; set; }
+        public string Year { get; set; }
 
         public int Area { get; set; }
 
@@ -28,7 +28,7 @@ namespace RealEstate.Models
 
         public int NumberOfRooms { get; set; }
 
-        public decimal Price { get; set; }
+        public string Price { get; set; }
 
         public string AdditionalFacilities { get; set; }
 

@@ -120,17 +120,32 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Papildoma Informacija</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Visi</value>
+  </data>
   <data name="AreaSize" xml:space="preserve">
     <value>Plotas (m²)</value>
   </data>
+  <data name="Cottage" xml:space="preserve">
+    <value>Kotedžas</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Foto</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Nuo</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>Namas</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Kaina</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Pavadinimas</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Iki</value>
   </data>
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Pastato Tipas</value>

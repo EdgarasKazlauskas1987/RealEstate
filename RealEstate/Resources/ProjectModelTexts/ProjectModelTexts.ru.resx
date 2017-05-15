@@ -120,11 +120,23 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Дополнительная Информация</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
   <data name="AreaSize" xml:space="preserve">
     <value>Площадь (М²)</value>
   </data>
+  <data name="Cottage" xml:space="preserve">
+    <value>Коттедж</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Фото</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>Дом</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Цена</value>
@@ -132,10 +144,13 @@
   <data name="Title" xml:space="preserve">
     <value>Hазвания</value>
   </data>
+  <data name="To" xml:space="preserve">
+    <value>Дo</value>
+  </data>
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Тип Здания</value>
   </data>
   <data name="YearBuilt" xml:space="preserve">
-    <value>Год Постройки</value>
+    <value>Год</value>
   </data>
 </root>

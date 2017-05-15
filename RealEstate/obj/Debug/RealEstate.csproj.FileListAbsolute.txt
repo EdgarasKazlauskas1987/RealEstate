@@ -103,3 +103,17 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.AdminManagementTexts.AdminManagementTexts.lt.resources
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.AdminManagementTexts.AdminManagementTexts.ru.resources
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.AdditionalProjectFields.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ServicesTexts.ServicesTexts.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ServicesTexts.ServicesTexts.lt.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Resources.ServicesTexts.ServicesTexts.ru.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.Web.Common.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.Web.Common.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.Web.Mvc.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\WebActivatorEx.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\bin\Ninject.Web.Mvc.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.changeIntIntoString2.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.backToDecimal.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.yearIntoString.resources
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate\obj\Debug\RealEstate.Migrations.priceIntoString.resources

@@ -127,9 +127,24 @@
     <value>Susisiekite</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>e-paštas:</value>
+    <value>E-paštas:</value>
   </data>
   <data name="Telephone" xml:space="preserve">
     <value>Tel:</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Žinutė</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>El. pašto adresas</value>
+  </data>
+  <data name="YourName" xml:space="preserve">
+    <value>Jūsų vardas</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Siųsti</value>
+  </data>
+  <data name="WriteToUs" xml:space="preserve">
+    <value>Rašykite mums</value>
   </data>
 </root>

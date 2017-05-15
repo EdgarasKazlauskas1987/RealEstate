@@ -127,9 +127,24 @@
     <value>Contact us</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>e-mail:</value>
+    <value>E-mail:</value>
   </data>
   <data name="Telephone" xml:space="preserve">
     <value>Tel:</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Your email</value>
+  </data>
+  <data name="YourName" xml:space="preserve">
+    <value>Your name</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="WriteToUs" xml:space="preserve">
+    <value>Write to us</value>
   </data>
 </root>
