@@ -147,4 +147,7 @@
   <data name="WriteToUs" xml:space="preserve">
     <value>Write to us</value>
   </data>
+  <data name="YourMessageSent" xml:space="preserve">
+    <value>Your message has been sent</value>
+  </data>
 </root>

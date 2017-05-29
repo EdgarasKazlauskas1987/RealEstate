@@ -70,11 +70,29 @@ namespace RealEstate.Resources.AdminManagementTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create New User.
+        /// </summary>
+        public static string CreateNewUser {
+            get {
+                return ResourceManager.GetString("CreateNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manage Projects.
         /// </summary>
         public static string ManageProjects {
             get {
                 return ResourceManager.GetString("ManageProjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Roles.
+        /// </summary>
+        public static string ManageRoles {
+            get {
+                return ResourceManager.GetString("ManageRoles", resourceCulture);
             }
         }
         

@@ -29,10 +29,19 @@ namespace RealEstate.Controllers
             var listOfImages = _projectRepo.GetAllImages();
             ViewBag.ImagesList = listOfImages;
 
-            var typesOfHouses = new List<string>();
-            typesOfHouses.Add(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.House);
-            typesOfHouses.Add(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Cottage);
-            ViewBag.typeOfBuilding = new SelectList(typesOfHouses);
+            List<SelectListItem> typesOfHouses = new List<SelectListItem>();
+            typesOfHouses.Add(new SelectListItem
+            {
+                Text = Resources.ProjectModelTexts.ProjectModelTexts.House,
+                Value = "House"
+            });
+            typesOfHouses.Add(new SelectListItem
+            {
+                Text = Resources.ProjectModelTexts.ProjectModelTexts.Cottage,
+                Value = "Cottage",
+            });
+            ViewBag.typeOfBuilding = typesOfHouses;
+
 
             if (!string.IsNullOrEmpty(typeOfBuilding) && !string.IsNullOrEmpty(fromYear) && !string.IsNullOrEmpty(toYear) 
                 && !string.IsNullOrEmpty(fromPrice) && !string.IsNullOrEmpty(toPrice))

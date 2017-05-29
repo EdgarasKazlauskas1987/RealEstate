@@ -61,6 +61,15 @@ namespace RealEstate.Resources.HomeTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UAB Vavanga is a real estate company located in Kaunas, Lithuania. We are offering high quality real estate development solutions to our clients and partners. Quality, durability, convenience and environmental awareness are those areas where we are focusing the most. Keeping a close and personal relationship with our customers helps us to achieve the best possible results for the best possible prices. And our completed projects are the best proof of that..
+        /// </summary>
+        public static string CompanyIntroduction {
+            get {
+                return ResourceManager.GetString("CompanyIntroduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CONTACT US.
         /// </summary>
         public static string ContactUs {

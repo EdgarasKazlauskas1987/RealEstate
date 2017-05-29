@@ -17,7 +17,7 @@
 </script>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    
     @using (Html.BeginForm("Index", "Projects", FormMethod.Get))
 
     {
@@ -40,7 +40,7 @@
                 <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span>Search</button>
             </div>
             <div class="col-md-6">
-                <button class="btn btn-success btn-small btn-block" onclick="setInputFieldsToDefault()"> <span class="glyphicon glyphicon-remove-sign"></span>Clear All</button>
+                <button type="reset"    class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span>Clear All</button>
 
             </div>
 
@@ -52,6 +52,16 @@
 </p>
 
 <script> </script>
+@if (Request.IsAuthenticated == true && ViewContext.HttpContext.User.IsInRole("Admin"))
+{
+    <div>
+        <a class="btn btn-success" href="@Url.Action("Create", "Projects")">
+            <div class="be-in-middle">
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.CreateNewProject)
+            </div>
+        </a>
+    </div>
+}
 <table class="table">
     <tr>
         <th>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<RealEstate.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "ContactUsersController"))
+{
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            
+        </td>
+        <td>
+            @Html.CheckBox("isNewlyEnrolled", item.Email)
+        </td>
+    </tr>
+}
+
+</table>
+
+<input type="submit" class="btn btn-default" />
+
+<div class="col-md-4">
+    <a type="btn btn-default" href="@Url.Action("InquiryForm", "Home")">
+        <div class="be-in-middle"> Mygtukas</div>
+    </a>
+</div>
+}

@@ -8,11 +8,16 @@ namespace RealEstate.Models
 {
     public class InquiryFormModel
     {
-        [Required, Display(Name = "Your name")]
+        [Required(ErrorMessageResourceType = typeof(Resources.SharedTexts.SharedTexts), ErrorMessageResourceName = "RequiredField")]
+        [Display(Name = "YourName", ResourceType = typeof(Resources.ContactsTexts.ContactsTexts))]
         public string FromName { get; set; }
-        [Required, Display(Name = "Your email"), EmailAddress]
+
+        [Required(ErrorMessageResourceType = typeof(Resources.SharedTexts.SharedTexts), ErrorMessageResourceName = "RequiredField")]
+        [Display(Name = "YourEmail", ResourceType = typeof(Resources.ContactsTexts.ContactsTexts))]
         public string FromEmail { get; set; }
-        [Required]
+
+        [Required(ErrorMessageResourceType = typeof(Resources.SharedTexts.SharedTexts), ErrorMessageResourceName = "RequiredField")]
+        [Display(Name = "Message", ResourceType = typeof(Resources.ContactsTexts.ContactsTexts))]
         public string Message { get; set; }
     }
 }

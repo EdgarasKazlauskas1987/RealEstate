@@ -63,3 +63,5 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.xml

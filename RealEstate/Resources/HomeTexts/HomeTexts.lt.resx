@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CompanyIntroduction" xml:space="preserve">
+    <value>UAB "Vavanga" yra nekilnojamo turto statybų kompanija įsikūrusi Kauno mieste. Savo klientams ir partneriams mes siūlome aukštos kokybės nekilnojamojo turto vystymo sprendimus. Kokybė, ilgaamžiškumas, patogumas bei aplinkos tausojimas yra tos skritys, kurioms mūsų skiriamas dėmesys yra didžiausias. Artimo ryšio su klientais palaikymas užtikrina, kad geriausius rezultatus už geriausią kainą. To įrodymas yra mūsų patenkinti klientai.</value>
+  </data>
   <data name="ContactUs" xml:space="preserve">
     <value>SUSISIEKITE</value>
   </data>

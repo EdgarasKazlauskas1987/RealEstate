@@ -144,4 +144,7 @@
   <data name="WriteToUs" xml:space="preserve">
     <value>Напишите нам</value>
   </data>
+  <data name="YourMessageSent" xml:space="preserve">
+    <value>Ваше сообщение было отправлено</value>
+  </data>
 </root>

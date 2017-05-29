@@ -120,8 +120,14 @@
   <data name="ContactUsers" xml:space="preserve">
     <value>Contact Users</value>
   </data>
+  <data name="CreateNewUser" xml:space="preserve">
+    <value>Create New User</value>
+  </data>
   <data name="ManageProjects" xml:space="preserve">
     <value>Manage Projects</value>
+  </data>
+  <data name="ManageRoles" xml:space="preserve">
+    <value>Manage Roles</value>
   </data>
   <data name="ManageUsers" xml:space="preserve">
     <value>Manage Users</value>

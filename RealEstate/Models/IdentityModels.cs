@@ -33,7 +33,11 @@ namespace RealEstate.Models
 
         public System.Data.Entity.DbSet<RealEstate.Models.Project> Projects { get; set; }
          public DbSet<RealEstate.Models.Image> Images { get; set; }
-       
+
+      //  public System.Data.Entity.DbSet<RealEstate.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        // public System.Data.Entity.DbSet<RealEstate.Models.ApplicationUser> ApplicationUsers { get; set; }
+
 
         // public System.Data.Entity.DbSet<RealEstate.Models.ApplicationUser> ApplicationUsers { get; set; }
 

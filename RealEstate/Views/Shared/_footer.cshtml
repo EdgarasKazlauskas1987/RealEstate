@@ -14,16 +14,30 @@
                 </address></li>
            </ul>
        </div>
-
-
-       <div class="col-md-4"> </div>
+       <div class="col-md-4" id="div-with-small-round-buttons"> 
+           <div class="row" id="div-with-buttons">
+               <div class="col-md-4">
+                   <a class="btn btn-default" id="small-circle-button" href="@Url.Action("Index", "Projects")">
+                       <div class="be-in-middle"> <span class="glyphicon glyphicon-home"></span></div>
+                   </a>
+               </div>
+               <div class="col-md-4">
+                   <a class="btn btn-default" id="small-circle-button" href="@Url.Action("Index", "Services")">
+                       <div class="be-in-middle"> <span class="glyphicon glyphicon-wrench"></span></div>
+                   </a>
+               </div>
+               <div class="col-md-4">
+                   <a class="btn btn-default" id="small-circle-button" href="@Url.Action("InquiryForm", "Home")">
+                       <div class="be-in-middle"> <span class="glyphicon glyphicon-pencil"></span></div>
+                   </a>
+               </div>
+           </div>   
+       </div>
        <div class="col-md-4">
            <ul class="list-without-bullets">
                <li><h3><b>@Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.ContactUs)</b></h3></li>
                <li><p><span class="glyphicon glyphicon-phone"></span>  @Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Telephone) +370 65517150></p></li>
                <li><p><span class="glyphicon glyphicon-envelope"></span>  @Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Email) <a href="mailto:info@ntverslas.lt">info@ntverslas.lt</a>></p></li>
-               
-
            </ul>
            
 
@@ -32,7 +46,7 @@
 
    </div>
     <div id="green-part-inside-footer">
-        Copyright &copy; Edgaras Kazlauskas
+        <div id="copyright-div">Copyright &copy; Edgaras Kazlauskas</div>
     </div>
 
 </div>

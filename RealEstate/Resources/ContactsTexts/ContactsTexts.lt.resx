@@ -147,4 +147,7 @@
   <data name="WriteToUs" xml:space="preserve">
     <value>Rašykite mums</value>
   </data>
+  <data name="YourMessageSent" xml:space="preserve">
+    <value>Jūsų žinutė buvo išiųsta</value>
+  </data>
 </root>

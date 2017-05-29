@@ -61,11 +61,29 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Additional Facilities.
+        /// </summary>
+        public static string AdditionalFacilities {
+            get {
+                return ResourceManager.GetString("AdditionalFacilities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Additional Information.
         /// </summary>
         public static string AdditionalInformation {
             get {
                 return ResourceManager.GetString("AdditionalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
             }
         }
         
@@ -97,6 +115,15 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create new project.
+        /// </summary>
+        public static string CreateNewProject {
+            get {
+                return ResourceManager.GetString("CreateNewProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Foto.
         /// </summary>
         public static string Foto {
@@ -120,6 +147,42 @@ namespace RealEstate.Resources.ProjectModelTexts {
         public static string House {
             get {
                 return ResourceManager.GetString("House", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images.
+        /// </summary>
+        public static string Images {
+            get {
+                return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of floors.
+        /// </summary>
+        public static string NumberOfFloors {
+            get {
+                return ResourceManager.GetString("NumberOfFloors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of rooms.
+        /// </summary>
+        public static string NumberOfRooms {
+            get {
+                return ResourceManager.GetString("NumberOfRooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plot area (a).
+        /// </summary>
+        public static string PlotArea {
+            get {
+                return ResourceManager.GetString("PlotArea", resourceCulture);
             }
         }
         

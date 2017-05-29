@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px; 
     height: 100%;
+   /* background-image:url(Images/background4.jpg); */
   /*   margin: 0;
     padding: 0; */
     
@@ -22,7 +23,7 @@ html {
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px; 
     padding-bottom: 200px;
 }
 
@@ -68,8 +69,28 @@ textarea {
     border-radius: 50%;
     border: 10px solid white;
 }
+
+#small-circle-button {
+    background-color:#02733D;
+    margin:auto;
+    text-align:center;
+    align-items: center;
+    padding-top: 11px;
+    display:block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#div-with-small-round-buttons {
+    padding-top: 38px;
+}
 #div-with-button {
    /* text-align:center; */
+}
+
+#copyright-div {
+    padding-top: 15px;
 }
 .be-in-middle {
     display: block;
@@ -87,6 +108,8 @@ textarea {
 #text-area-no-max-width {
     max-width: 100%;
     padding-top: 42px;
+    word-break: keep-all;
+    color:#0F723F;
 }
 
 #white-color-li {
@@ -100,11 +123,21 @@ textarea {
     padding-top: 40px;
     display:block;
     height: 120px;
-    width: 250px;
+    width: 320px;
+}
+
+#button-in-admin-main-view {
+    margin:auto;
+    text-align:center;
+    align-items: center;
+    padding-top: 30px;
+    display:block;
+    height: 85px;
+    width: 330px;
 }
 
 #admin-buttons {
-    padding-top: 40px;
+    padding-top: 140px;
 }
 
 .list-of-services {
@@ -124,8 +157,8 @@ textarea {
    /* display: inline-block;
    width: 220px; 
   height: 140px;
-  margin: 1em; */
-   border-style: solid;
+  margin: 1em; 
+   border-style: solid; */
 }
 
 .inquiry-div {
@@ -155,6 +188,7 @@ textarea {
 
 #div-with-four-projects {
     padding-top: 15px;
+    /*background-color: lightgrey; */ 
 }
 
 .made-footer {
@@ -171,9 +205,7 @@ textarea {
      background-color: #02733D;
      width: 100%;
      height: 30%;
-     text-align:center;
-    
-     
+     text-align:center;   
 }
 
 #white-part-in-footer {
@@ -184,6 +216,31 @@ textarea {
 
 .list-without-bullets {
     list-style-type: none;
+}
+
+/* styling tables */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#container-of-details-image {
+    border-style: solid;
+    display: inline-block;
 }
 
 

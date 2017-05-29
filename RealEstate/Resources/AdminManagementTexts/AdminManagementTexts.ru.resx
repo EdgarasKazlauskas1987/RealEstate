@@ -120,8 +120,14 @@
   <data name="ContactUsers" xml:space="preserve">
     <value>Связаться с Пользователем</value>
   </data>
+  <data name="CreateNewUser" xml:space="preserve">
+    <value>Создать Нового Пользователя</value>
+  </data>
   <data name="ManageProjects" xml:space="preserve">
     <value>Управление Проектами</value>
+  </data>
+  <data name="ManageRoles" xml:space="preserve">
+    <value>Управление Ролями</value>
   </data>
   <data name="ManageUsers" xml:space="preserve">
     <value>Управление Пользователями</value>

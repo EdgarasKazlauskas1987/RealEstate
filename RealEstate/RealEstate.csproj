@@ -142,6 +142,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.JustMock, Version=2016.2.426.1, Culture=neutral, PublicKeyToken=721b6c5bc0326b3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\JustMock.2016.2.426.1\lib\Net35\Telerik.JustMock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
@@ -215,6 +219,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ApplicationUsersController.cs" />
+    <Compile Include="Controllers\ContactUsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -252,6 +257,14 @@
     <Compile Include="Migrations\201705122123200_priceIntoString.Designer.cs">
       <DependentUpon>201705122123200_priceIntoString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705281148088_MakeErrorMessageLocalization.cs" />
+    <Compile Include="Migrations\201705281148088_MakeErrorMessageLocalization.Designer.cs">
+      <DependentUpon>201705281148088_MakeErrorMessageLocalization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705281227102_AddLocalizationToProjectModelItems.cs" />
+    <Compile Include="Migrations\201705281227102_AddLocalizationToProjectModelItems.Designer.cs">
+      <DependentUpon>201705281227102_AddLocalizationToProjectModelItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abstract\IProjectRepository.cs" />
     <Compile Include="Models\Abstract\IRoleRepository.cs" />
@@ -262,6 +275,7 @@
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Repositories\ProjectRepository.cs" />
     <Compile Include="Models\Repositories\RoleRepository.cs" />
+    <Compile Include="Models\ViewModels\SendEmail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AdminManagementTexts\AdminManagementTexts.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -353,6 +367,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ServicesTexts.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\SharedTexts\SharedTexts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedTexts.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SharedTexts\SharedTexts.lt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedTexts.lt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SharedTexts\SharedTexts.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedTexts.ru.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +390,7 @@
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\background1.jpg" />
     <Content Include="Content\Images\background3.jpg" />
+    <Content Include="Content\Images\background4.jpg" />
     <Content Include="Content\Images\buildings1.jpg" />
     <Content Include="Content\Images\buildings2.jpg" />
     <Content Include="Content\Images\buildings3.jpg" />
@@ -374,6 +404,8 @@
     <Content Include="Content\Images\ru.png" />
     <Content Include="Content\Images\services.jpg" />
     <Content Include="Content\Images\turnRight.png" />
+    <Content Include="Content\Images\turnright1.png" />
+    <Content Include="Content\Images\turnright2.png" />
     <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -449,6 +481,10 @@
     <Content Include="Views\ApplicationUsers\Index.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
+    <Content Include="Views\ContactUsers\Index.cshtml" />
+    <Content Include="Views\ContactUsers\SendMessages.cshtml" />
+    <Content Include="Views\ContactUsers\SendEmails.cshtml" />
+    <Content Include="Views\ContactUsers\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -482,6 +518,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705122123200_priceIntoString.resx">
       <DependentUpon>201705122123200_priceIntoString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705281148088_MakeErrorMessageLocalization.resx">
+      <DependentUpon>201705281148088_MakeErrorMessageLocalization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705281227102_AddLocalizationToProjectModelItems.resx">
+      <DependentUpon>201705281227102_AddLocalizationToProjectModelItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AdminManagementTexts\AdminManagementTexts.lt.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -554,6 +596,18 @@
     <EmbeddedResource Include="Resources\ServicesTexts\ServicesTexts.ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ServicesTexts.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SharedTexts\SharedTexts.lt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedTexts.lt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SharedTexts\SharedTexts.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedTexts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SharedTexts\SharedTexts.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedTexts.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

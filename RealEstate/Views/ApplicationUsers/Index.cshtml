@@ -4,21 +4,27 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h2>@Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
+                                    AdminManagementTexts.ManageUsers)</h2>
 
 <div class="col-md-4">
-    <a class="btn btn-success" id="ordinary-button" href="@Url.Action("Index", "Role")">
+    <a class="btn btn-success" id="button-in-admin-main-view" href="@Url.Action("Create", "ApplicationUsers")">
         <div class="be-in-middle">
             @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
-                                    AdminManagementTexts.ContactUsers)
+                                    AdminManagementTexts.CreateNewUser)
         </div>
     </a>
 </div>
-<table class="table">
+<div class="col-md-4">
+    <a class="btn btn-success" id="button-in-admin-main-view" href="@Url.Action("Index", "Role")">
+        <div class="be-in-middle">
+            @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
+                                    AdminManagementTexts.ManageRoles)
+        </div>
+    </a>
+</div>
+
+<table class="table" style="margin-top:20px">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Email)

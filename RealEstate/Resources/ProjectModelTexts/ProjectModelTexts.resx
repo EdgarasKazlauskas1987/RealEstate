@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdditionalFacilities" xml:space="preserve">
+    <value>Additional Facilities</value>
+  </data>
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Additional Information</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
@@ -129,6 +135,9 @@
   <data name="Cottage" xml:space="preserve">
     <value>Cottage</value>
   </data>
+  <data name="CreateNewProject" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Foto</value>
   </data>
@@ -137,6 +146,18 @@
   </data>
   <data name="House" xml:space="preserve">
     <value>House</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="NumberOfFloors" xml:space="preserve">
+    <value>Number of floors</value>
+  </data>
+  <data name="NumberOfRooms" xml:space="preserve">
+    <value>Number of rooms</value>
+  </data>
+  <data name="PlotArea" xml:space="preserve">
+    <value>Plot area (a)</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Price</value>

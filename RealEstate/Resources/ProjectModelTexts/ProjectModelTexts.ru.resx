@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdditionalFacilities" xml:space="preserve">
+    <value>Дополнительные услуги</value>
+  </data>
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Дополнительная Информация</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Все</value>
@@ -129,6 +135,9 @@
   <data name="Cottage" xml:space="preserve">
     <value>Коттедж</value>
   </data>
+  <data name="CreateNewProject" xml:space="preserve">
+    <value>Создать новый проект</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Фото</value>
   </data>
@@ -137,6 +146,18 @@
   </data>
   <data name="House" xml:space="preserve">
     <value>Дом</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Изображений</value>
+  </data>
+  <data name="NumberOfFloors" xml:space="preserve">
+    <value>Количество этажей</value>
+  </data>
+  <data name="NumberOfRooms" xml:space="preserve">
+    <value>Количество комнат</value>
+  </data>
+  <data name="PlotArea" xml:space="preserve">
+    <value>Площадь участка (a)</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Цена</value>

@@ -142,6 +142,15 @@ namespace RealEstate.Resources.ContactsTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your message has been sent.
+        /// </summary>
+        public static string YourMessageSent {
+            get {
+                return ResourceManager.GetString("YourMessageSent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your name.
         /// </summary>
         public static string YourName {

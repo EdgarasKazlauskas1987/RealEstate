@@ -25,8 +25,8 @@
     <div class="col-md-4">
         <img src="@Url.Content("~/Content/Images/CompanyLogo.png")" class="company-logo" />
     </div>
-    <pre class="col-md-8"id="text-area-no-max-width" rows="5" cols="150">
-        Allie Mae Burroughs, Wife of a Cotton Sharecropper, Hale County, Alabama,a 1936 photograph taken by Walker Evans during his work for the Farm SecurityAdministration. Much of Evans's work documenting the effects of the Great Depression,including this photograph, used a large-format, 8x10-inch camera. Evans described hisgoal as making pictures that are "literate, authoritative, transcendent".
+    <pre class="col-md-8"id="text-area-no-max-width" rows="12" cols="400">
+       @Html.Raw(RealEstate.Resources.HomeTexts.HomeTexts.CompanyIntroduction)
     </pre>
 </div>
 
@@ -52,11 +52,8 @@
     @{ 
         var fourProjects = ViewBag.FourRandomProjects;
 
-
         if (fourProjects.Count > 0)
         {
-
-
             foreach (var item in fourProjects) {
                 var listOfStrings = new List<byte[]>();
 
@@ -75,8 +72,8 @@
                         <div class="col-md-3" id="div-in-one-line" style="height:100%"> 
                             <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
                                 <img src='@imgSrc' style="width:100%; height:150px" />
-                                <div style="width:100%; height:20%">@item.Year</div>
-                                <div style="text-align:right; height:10%"><img src='~/Content/Images/turnRight.png' style="height:100%; width:20%" /></div>
+                                <div style="width:100%; height:20%; padding-top:10px">@item.Title</div>
+                                <div style="text-align:right; height:10%"><img src='~/Content/Images/turnright1.png' style="height:100%; width:20%; padding-bottom: 10px" /></div>
                             </a>
                          </div>
                        }

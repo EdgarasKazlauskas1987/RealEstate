@@ -4,7 +4,21 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+@{
+    List<SelectListItem> typesOfHouses = new List<SelectListItem>();
+    typesOfHouses.Add(new SelectListItem
+    {
+        Text = "House",
+        Value = "House"
+    });
+    typesOfHouses.Add(new SelectListItem
+    {
+        Text = "Cottage",
+        Value = "Cottage",
+    });
+}
+
+<h2>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.CreateNewProject)</h2>
 
 
 @using (Html.BeginForm("Create", "Projects", FormMethod.Post, new { enctype = "multipart/form-data" })) 
@@ -12,7 +26,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Project</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -35,7 +48,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TypeOfBuilding, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TypeOfBuilding, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.TypeOfBuilding, typesOfHouses, "-- Select --")
                 @Html.ValidationMessageFor(model => model.TypeOfBuilding, "", new { @class = "text-danger" })
             </div>
         </div>

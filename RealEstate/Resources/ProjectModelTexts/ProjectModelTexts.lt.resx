@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdditionalFacilities" xml:space="preserve">
+    <value>Papildomos patalpos</value>
+  </data>
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Papildoma Informacija</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresas</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Visi</value>
@@ -129,6 +135,9 @@
   <data name="Cottage" xml:space="preserve">
     <value>Kotedžas</value>
   </data>
+  <data name="CreateNewProject" xml:space="preserve">
+    <value>Sukurti naują projektą</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Foto</value>
   </data>
@@ -137,6 +146,18 @@
   </data>
   <data name="House" xml:space="preserve">
     <value>Namas</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Nuotraukos</value>
+  </data>
+  <data name="NumberOfFloors" xml:space="preserve">
+    <value>Aukštų skaičius</value>
+  </data>
+  <data name="NumberOfRooms" xml:space="preserve">
+    <value>Kambarių skaičius</value>
+  </data>
+  <data name="PlotArea" xml:space="preserve">
+    <value>Sklypo plotas (a)</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Kaina</value>

@@ -120,6 +120,9 @@
   <data name="Contact" xml:space="preserve">
     <value>KONTAKTAI</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>PAGRINDINIS</value>
+  </data>
   <data name="LogIn" xml:space="preserve">
     <value>PRISIJUNGTI</value>
   </data>
