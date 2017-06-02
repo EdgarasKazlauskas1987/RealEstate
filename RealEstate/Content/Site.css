@@ -37,8 +37,7 @@ html {
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
-select,
-textarea {
+select, textarea:not(.text-area-create-form) {
     max-width: 280px;
 }
 
@@ -168,8 +167,14 @@ textarea {
 }
 
 .text-area-inquiry-form {
-    width: 300px;
-    height: 200px;
+    width: 300px !important;
+    height: 200px !important;
+}
+
+.text-area-create-form {
+    width: 280 !important;
+    max-width: 280px !important;
+    height: 200px !important;
 }
 .div-as-body {
     height:100%;
@@ -241,6 +246,23 @@ th {
 #container-of-details-image {
     border-style: solid;
     display: inline-block;
+}
+
+dt {
+    padding: 8px;
+    text-align: left;
+   /* margin: 7px;*/
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: solid 1px #000;
+}
+
+dd {
+    /*margin: 5px;*/
+    padding: 8px;
+    text-align: left;
+    border-bottom: solid 1px #000;
+    width: 370px;
 }
 
 

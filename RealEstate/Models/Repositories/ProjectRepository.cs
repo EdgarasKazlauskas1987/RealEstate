@@ -48,17 +48,20 @@ namespace RealEstate.Models.Repositories
         {
             _db.Projects.Add(project);
             _db.SaveChanges();
-            if (images != null)
+            if (images.Count() > 0)
             {
                 var imagesList = new List<Image>();
                 foreach (var image in images)
                 {
-                    using (var br = new BinaryReader(image.InputStream))
-                    {
-                        var data = br.ReadBytes(image.ContentLength);
-                        var img = new Image { ProjectBelongsId = project.ProjectId };
-                        img.ImageData = data;
-                        imagesList.Add(img);
+                    if (image != null) {
+
+                        using (var br = new BinaryReader(image.InputStream))
+                        {
+                            var data = br.ReadBytes(image.ContentLength);
+                            var img = new Image { ProjectBelongsId = project.ProjectId };
+                            img.ImageData = data;
+                            imagesList.Add(img);
+                        }
                     }
                 }
                 project.Images = imagesList;

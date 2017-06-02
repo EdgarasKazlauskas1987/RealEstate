@@ -401,6 +401,7 @@
     <Content Include="Content\Images\green-circle.png" />
     <Content Include="Content\Images\inquirybackground.jpg" />
     <Content Include="Content\Images\lt.png" />
+    <Content Include="Content\Images\no-house-image-available.jpg" />
     <Content Include="Content\Images\ru.png" />
     <Content Include="Content\Images\services.jpg" />
     <Content Include="Content\Images\turnRight.png" />

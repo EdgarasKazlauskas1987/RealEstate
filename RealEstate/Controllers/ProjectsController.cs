@@ -134,6 +134,7 @@ namespace RealEstate.Controllers
                 listOfStrings.Add(item.ImageData);
             }
             ViewBag.ProgList = listOfStrings;
+            ViewBag.ProjectTitle = project.Title;
 
             if (project == null)
             {
@@ -145,6 +146,19 @@ namespace RealEstate.Controllers
         // GET: Projects/Create
         public ActionResult Create()
         {
+            List<SelectListItem> typesOfHouses = new List<SelectListItem>();
+            typesOfHouses.Add(new SelectListItem
+            {
+                Text = Resources.ProjectModelTexts.ProjectModelTexts.House,
+                Value = "House"
+            });
+            typesOfHouses.Add(new SelectListItem
+            {
+                Text = Resources.ProjectModelTexts.ProjectModelTexts.Cottage,
+                Value = "Cottage",
+            });
+            ViewBag.typeOfBuilding = typesOfHouses;
+
             return View();
         }
 

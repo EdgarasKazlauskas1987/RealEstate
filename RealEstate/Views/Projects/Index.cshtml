@@ -93,24 +93,30 @@
     <tr> 
             <td>
                 @{
-                    var listOfStrings = new List<byte[]>();
+                    var listOfImages = new List<byte[]>();
                     if (ViewBag.ImagesList != null)
                     {
                         foreach (var image in ViewBag.ImagesList)
                         {
                             if (image.ProjectBelongsId == item.ProjectId)
                             {
-                                listOfStrings.Add(image.ImageData);
+                                listOfImages.Add(image.ImageData);
                             }
                         }
-                        if (listOfStrings.Count != 0)
+                        if (listOfImages.Count != 0)
                         {
-                            var firstImage = listOfStrings.First<byte[]>();
+                            var firstImage = listOfImages.First<byte[]>();
                             var base64 = Convert.ToBase64String(firstImage);
                             var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
                             <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
                                 <img src='@imgSrc' style="width:180px;height:140px;" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
+                                <img src='~/Content/Images/no-house-image-available.jpg' style="width:180px;height:140px;" />
                             </a>
                         }
                     }
