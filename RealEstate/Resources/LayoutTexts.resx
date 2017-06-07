@@ -120,11 +120,17 @@
   <data name="Contact" xml:space="preserve">
     <value>CONTACT</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>HOME</value>
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>LOG IN</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log off</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>REGISTER</value>

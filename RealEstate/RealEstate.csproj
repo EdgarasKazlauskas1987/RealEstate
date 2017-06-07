@@ -265,6 +265,10 @@
     <Compile Include="Migrations\201705281227102_AddLocalizationToProjectModelItems.Designer.cs">
       <DependentUpon>201705281227102_AddLocalizationToProjectModelItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706031619201_AddingMaxLengthToInputFields.cs" />
+    <Compile Include="Migrations\201706031619201_AddingMaxLengthToInputFields.Designer.cs">
+      <DependentUpon>201706031619201_AddingMaxLengthToInputFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abstract\IProjectRepository.cs" />
     <Compile Include="Models\Abstract\IRoleRepository.cs" />
@@ -489,6 +493,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\Oswald\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -525,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705281227102_AddLocalizationToProjectModelItems.resx">
       <DependentUpon>201705281227102_AddLocalizationToProjectModelItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706031619201_AddingMaxLengthToInputFields.resx">
+      <DependentUpon>201706031619201_AddingMaxLengthToInputFields.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AdminManagementTexts\AdminManagementTexts.lt.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

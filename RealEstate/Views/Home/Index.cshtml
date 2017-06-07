@@ -21,31 +21,28 @@
     slideit()
 
 </script>
-<div class="row">
-    <div class="col-md-4">
-        <img src="@Url.Content("~/Content/Images/CompanyLogo.png")" class="company-logo" />
+
+<div class="row" style="margin-top: 30px">
+    <div class="btn-group-vertical col-md-4">
+        <div>
+            <a class="action-button shadow animate blue btn btn-success" href="@Url.Action("Index", "Projects")">
+                <div><span class="glyphicon glyphicon-home"></span> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Projects)</div>
+            </a>
+        </div>
+        <div>
+            <a class="action-button shadow animate blue btn btn-success" href="@Url.Action("Index", "Services")">
+                <div><span class="glyphicon glyphicon-wrench"></span> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Services)</div>
+            </a>
+        </div>
+        <div>
+            <a class="action-button shadow animate blue btn btn-success" href="@Url.Action("InquiryForm", "Home")">
+                <div><span class="glyphicon glyphicon-pencil"></span> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.ContactUs)</div>
+            </a>
+        </div>
     </div>
-    <pre class="col-md-8"id="text-area-no-max-width" rows="12" cols="400">
+    <pre class="col-md-8" id="text-area-no-max-width" rows="12" cols="400">
        @Html.Raw(RealEstate.Resources.HomeTexts.HomeTexts.CompanyIntroduction)
     </pre>
-</div>
-
-<div class="row" id="div-with-buttons"> 
-    <div class="col-md-4">     
-        <a class="btn btn-default" id="circle-button" href="@Url.Action("Index", "Projects")">
-            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Projects)</div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a class="btn btn-default" id="circle-button" href="@Url.Action("Index", "Services")">
-            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.Services)</div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a class="btn btn-default" id="circle-button" href="@Url.Action("InquiryForm", "Home")">
-            <div class="be-in-middle"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.ContactUs)</div>
-        </a>
-    </div>
 </div>
 
 <div class="row" id="div-with-four-projects">
@@ -71,23 +68,40 @@
                     var base64 = Convert.ToBase64String(firstImage);
                     var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
-                        <div class="col-md-3" id="div-in-one-line" style="height:100%"> 
+                        <div class="col-sm-6 col-md-3" id="blogpost-card"> 
+                            <div class="blogpost-card--img-container"> <img class="blogpost-card--img" src='@imgSrc' /> </div>
+                                <div class="blogpost-card--title">@item.Title</div>
+                                <div class="blogpost-card--body">
+                                    <ul>
+                                        <li>@item.TypeOfBuilding</li>
+                                        <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Address): @item.Address</li>
+                                        <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize): @item.Area</li>
+                                        <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price): €@item.Price </li>
+                                    </ul>
+                                </div>
                             <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
-                                <img src='@imgSrc' style="width:100%; height:150px" />
-                                <div style="width:100%; height:20%; padding-top:10px">@item.Title</div>
-                                <div style="text-align:right; height:10%"><img src='~/Content/Images/turnright1.png' style="height:100%; width:20%; padding-bottom: 10px" /></div>
+                                <div class="blogpost-card--action"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.More).. </div>
                             </a>
-                         </div>
+</div>
                 }
                 else
                 {
-                    <div class="col-md-3" id="div-in-one-line" style="height:100%">
+                    <div class="col-sm-6 col-md-3" id="blogpost-card">
+                        <div class="blogpost-card--img-container"> <img class="blogpost-card--img" src='~/Content/Images/no-house-image-available.jpg' /></div>  
+                        <div class="blogpost-card--title">@item.Title</div>
+                        <div class="blogpost-card--body">
+                            <ul>
+                                <li>@item.TypeOfBuilding</li>
+                                <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Address): @item.Address</li>
+                                <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize): @item.Area</li>
+                                <li>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price): €@item.Price </li>
+                            </ul>
+                        </div>
                         <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
-                            <img src='~/Content/Images/no-house-image-available.jpg' style="width:100%; height:150px" />
-                            <div style="width:100%; height:20%; padding-top:10px">@item.Title</div>
-                            <div style="text-align:right; height:10%"><img src='~/Content/Images/turnright1.png' style="height:100%; width:20%; padding-bottom: 10px" /></div>
+                            <div class="blogpost-card--action"> @Html.DisplayName(RealEstate.Resources.HomeTexts.HomeTexts.More).. </div>
                         </a>
-                    </div>
+                    </div>    
+                    
                 }
             }
         }

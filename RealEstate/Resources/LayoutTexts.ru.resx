@@ -120,11 +120,17 @@
   <data name="Contact" xml:space="preserve">
     <value>КОНТАКТЫ</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Привет</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>ГЛАВНЫЙ</value>
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>ВОЙТИ</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Выйти</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>РЕГИСТРАЦИЯ</value>

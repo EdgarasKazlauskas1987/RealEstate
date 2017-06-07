@@ -79,6 +79,15 @@ namespace RealEstate.Resources.HomeTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to More information.
+        /// </summary>
+        public static string More {
+            get {
+                return ResourceManager.GetString("More", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PROJECTS.
         /// </summary>
         public static string Projects {

@@ -120,11 +120,17 @@
   <data name="Contact" xml:space="preserve">
     <value>KONTAKTAI</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Sveiki</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>PAGRINDINIS</value>
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>PRISIJUNGTI</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Atsijungti</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>REGISTRUOTIS</value>

@@ -123,6 +123,9 @@
   <data name="ContactUs" xml:space="preserve">
     <value>СВЯЖИТЕСЬ</value>
   </data>
+  <data name="More" xml:space="preserve">
+    <value>Более</value>
+  </data>
   <data name="Projects" xml:space="preserve">
     <value>ПРОЕКТЫ</value>
   </data>

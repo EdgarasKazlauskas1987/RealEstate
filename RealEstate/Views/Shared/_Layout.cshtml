@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="~/Content/w3.css">
+    <link rel="stylesheet" href="~/fonts/Oswald/">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     
@@ -39,7 +40,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-
+                        <li><img id="company-logo" src="@Url.Content("~/Content/Images/CompanyLogo.png")"/></li>
                         <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.Home, "Index", "Home")</li>
                         <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.Contact, "Contact", "Home")</li>
 

@@ -37,10 +37,10 @@
         @* <input type="submit" value="Filter" class="whatever"/> *@
         <div class="row">
             <div class="col-md-6">
-                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span>Search</button>
+                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span> Search</button>
             </div>
             <div class="col-md-6">
-                <button type="reset"    class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span>Clear All</button>
+                <button type="reset"    class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span> Clear All</button>
 
             </div>
 
@@ -49,7 +49,7 @@
     </p>
 
     }
-</p>
+
 
 <script> </script>
 @if (Request.IsAuthenticated == true && ViewContext.HttpContext.User.IsInRole("Admin"))
@@ -80,17 +80,17 @@
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize)
         </th>
         <th>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NumberOfRooms)
         </th>
         <th>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalInformation)
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
 
-    <tr> 
+    <tr class="parent-tr"> 
             <td>
                 @{
                     var listOfImages = new List<byte[]>();
@@ -136,12 +136,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Area)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
+            <td class="vertical-middle-td">
+                @Html.DisplayFor(modelItem => item.NumberOfRooms)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AdditionalInformation)
+            <td class="lower-left-corner-td">
+                €@Html.DisplayFor(modelItem => item.Price) 
             </td>
+            
             <td>
                 @if (Request.IsAuthenticated == true)
                 {
