@@ -123,6 +123,12 @@
   <data name="ContactUs" xml:space="preserve">
     <value>SUSISIEKITE</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Ištrinti</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redaguoti</value>
+  </data>
   <data name="More" xml:space="preserve">
     <value>Plačiau</value>
   </data>

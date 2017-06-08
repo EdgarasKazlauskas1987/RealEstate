@@ -12,6 +12,8 @@
         document.getElementById("to-year-textbox").value = "";
         document.getElementById("from-price-textbox").value = "";
         document.getElementById("to-price-textbox").value = "";
+        document.getElementById("dropdownlist").selectedIndex = 0;
+
     }
 
 </script>
@@ -24,7 +26,7 @@
     <p>
         <div id="search-inputs-div">
            
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding) @Html.DropDownList("typeOfBuilding", RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.All)
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding) @Html.DropDownList("typeOfBuilding",null,  RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.All,  new { @id = "dropdownlist" })
             <br />
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt) @Html.TextBox("fromYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-year-textbox" })
             @Html.TextBox("toYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-year-textbox" })
@@ -37,10 +39,10 @@
         @* <input type="submit" value="Filter" class="whatever"/> *@
         <div class="row">
             <div class="col-md-6">
-                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span> Search</button>
+                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.Search)</button>
             </div>
             <div class="col-md-6">
-                <button type="reset"    class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span> Clear All</button>
+                <button type="button" value="Reset form" onclick="setInputFieldsToDefault()" class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.ClearAll)</button>
 
             </div>
 
@@ -71,26 +73,20 @@
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Title)
         </th>
         <th>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
-        </th>
-        <th>
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt)
         </th>
         <th>
             @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize)
         </th>
         <th>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NumberOfRooms)
-        </th>
-        <th>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
+            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Rooms)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
 
-    <tr class="parent-tr"> 
+    <tr style="position:relative"> 
             <td>
                 @{
                     var listOfImages = new List<byte[]>();
@@ -122,13 +118,11 @@
                     }
                 }
             </td>
-            <td>
+            <td style="position:relative">
                 <a href="@Url.Action("Details", "Projects", new { id = item.ProjectId })">
                     @Html.DisplayFor(modelItem => item.Title)
                 </a>
-            </td>
-            <td>
-            @Html.DisplayFor(modelItem => item.TypeOfBuilding)
+                <div style="bottom:0; right:0; font-weight: bold; position: absolute">@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price): €@Html.DisplayFor(modelItem => item.Price) </div> 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Year)
@@ -136,27 +130,35 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Area)
             </td>
-            <td class="vertical-middle-td">
+            <td>
                 @Html.DisplayFor(modelItem => item.NumberOfRooms)
             </td>
-            <td class="lower-left-corner-td">
-                €@Html.DisplayFor(modelItem => item.Price) 
-            </td>
-            
             <td>
-                @if (Request.IsAuthenticated == true)
-                {
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId })
+               
+                    @if (Request.IsAuthenticated == true && ViewContext.HttpContext.User.IsInRole("Admin"))
+                        {
+                            <div style="display:block; margin-top:13px;">
+                                <div>
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                </div>
+                                <div>
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Edit, "Edit", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                </div>
+                                <div>
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Delete, "Delete", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                </div>
+        
+        
+                            </div>
+                    }
+                    else
+                    {
+                        <div style="margin-top: 27%;">
 
-                }
+                            @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
 
-                @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
-
-                @if (Request.IsAuthenticated == true)
-                {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
-
-                }
+                        </div>
+                    }
 
             </td>
 </tr>

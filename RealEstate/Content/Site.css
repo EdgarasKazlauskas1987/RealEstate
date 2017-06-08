@@ -171,6 +171,8 @@ select, textarea:not(.text-area-create-form) {
 }
 
 #search-inputs-div {
+  margin-top: 35px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   display: table;
@@ -370,6 +372,17 @@ dd {
 }
 
 /* end */
+
+#parent-element {
+    position: relative;
+}
+
+#child-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15% 0 0 -25%;
+}
 
 
 
