@@ -176,6 +176,12 @@ select, textarea:not(.text-area-create-form) {
   margin-left: auto;
   margin-right: auto;
   display: table;
+  text-align: right; 
+}
+
+#search-projects-buttons {
+     margin-top: 35px;
+     margin-bottom: 20px;
 }
 
 #company-logo {
@@ -382,6 +388,10 @@ dd {
     top: 50%;
     left: 50%;
     margin: -15% 0 0 -25%;
+}
+
+.buttons-with-70proc-width {
+    width: 70%;
 }
 
 

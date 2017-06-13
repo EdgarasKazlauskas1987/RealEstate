@@ -7,7 +7,8 @@
 
 <h2>@Html.Raw(ViewBag.ProjectTitle)</h2>
 
-<div>
+<div class="row">
+    <div class="col-md-7">
     <hr />
 
     @{
@@ -36,92 +37,98 @@
                         <img src='~/Content/Images/no-house-image-available.jpg' width="550" height="450" />
                     }
     }
-    
+
 
     <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
     </script>
 
-    
-    <dl class="dl-horizontal">
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Title)
-        </dt>
+        <dl class="dl-horizontal">
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
-        </dt>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Title)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TypeOfBuilding)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding)
+            </dt>
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TypeOfBuilding)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Year)
-        </dd>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt)
+            </dt>
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Year)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Area)
-        </dd>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AreaSize)
+            </dt>
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.PlotArea)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Area)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PlotArea)
-        </dd>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.PlotArea)
+            </dt>
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NumberOfRooms)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PlotArea)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfRooms)
-        </dd>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NumberOfRooms)
+            </dt>
 
-        <dt>
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfRooms)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-    </dl>
+            <dt>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price)
+            </dt>
 
-    <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalFacilities)</h3>
-    <article>@Html.DisplayFor(model => model.AdditionalFacilities)</article>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+        </dl>
+</div>
+    <div class="col-md-5" style="margin-top: 30px;">
 
-    <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalInformation)</h3>
-    <article>@Html.DisplayFor(model => model.AdditionalInformation)</article>
+        <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalFacilities)</h3>
+        <article>@Html.DisplayFor(model => model.AdditionalFacilities)</article>
+
+        <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalInformation)</h3>
+        <article>@Html.DisplayFor(model => model.AdditionalInformation)</article>
+
+        
+
+    </div>
     
 </div>
 <p>

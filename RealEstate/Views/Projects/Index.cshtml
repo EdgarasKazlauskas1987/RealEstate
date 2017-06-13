@@ -18,35 +18,33 @@
 
 </script>
 
-<p>
+
     
     @using (Html.BeginForm("Index", "Projects", FormMethod.Get))
 
     {
     <p>
-        <div id="search-inputs-div">
-           
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding) @Html.DropDownList("typeOfBuilding",null,  RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.All,  new { @id = "dropdownlist" })
-            <br />
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt) @Html.TextBox("fromYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-year-textbox" })
-            @Html.TextBox("toYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-year-textbox" })
-            <br />
-            @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price) @Html.TextBox("fromPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-price-textbox" })
-            @Html.TextBox("toPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-price-textbox" })
-            <br />
-        </div>
-
-        @* <input type="submit" value="Filter" class="whatever"/> *@
         <div class="row">
-            <div class="col-md-6">
-                <button type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.Search)</button>
+            <div class="col-md-9" style="display:inline-block">
+                <div class="row">
+                <div class="col-md-6" id="search-inputs-div">
+
+                    @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.TypeOfBuilding) @Html.DropDownList("typeOfBuilding", null, RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.All, new { @id = "dropdownlist" })
+                    <br />
+                    @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.YearBuilt) @Html.TextBox("fromYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-year-textbox" })
+                    @Html.TextBox("toYear", "", new { @placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-year-textbox" })
+                    <br />
+                    @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.Price) @Html.TextBox("fromPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.From, @id = "from-price-textbox" })
+                    @Html.TextBox("toPrice", "", new { placeholder = RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.To, @id = "to-price-textbox" })
+                    <br />
+                </div>
+                <div class="col-md-6" id="search-projects-buttons">
+                    <button style="width:70%" type="submit" value="Filter" class="btn btn-primary btn-small btn-block"> <span class="glyphicon glyphicon-search"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.Search)</button>
+                    <button style="width:70%" type="button" value="Reset form" onclick="setInputFieldsToDefault()" class="btn btn-success btn-small btn-block"> <span class="glyphicon glyphicon-remove-sign"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.ClearAll)</button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <button type="button" value="Reset form" onclick="setInputFieldsToDefault()" class="btn btn-success btn-small btn-block" > <span class="glyphicon glyphicon-remove-sign"></span> @Html.DisplayName(RealEstate.Resources.SharedTexts.SharedTexts.ClearAll)</button>
-
             </div>
-
-
+            <div class="col-md-3"></div>
         </div>
     </p>
 
@@ -138,14 +136,14 @@
                     @if (Request.IsAuthenticated == true && ViewContext.HttpContext.User.IsInRole("Admin"))
                         {
                             <div style="display:block; margin-top:13px;">
-                                <div>
-                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                <div style="width:100%">
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large buttons-with-70proc-width" })
                                 </div>
                                 <div>
-                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Edit, "Edit", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Edit, "Edit", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large buttons-with-70proc-width" })
                                 </div>
                                 <div>
-                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Delete, "Delete", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                                     @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.Delete, "Delete", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large buttons-with-70proc-width" })
                                 </div>
         
         
@@ -155,7 +153,7 @@
                     {
                         <div style="margin-top: 27%;">
 
-                            @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large" })
+                            @Html.ActionLink(RealEstate.Resources.HomeTexts.HomeTexts.More, "Details", new { id = item.ProjectId }, new { @class = "btn btn-primary btn-large buttons-with-70proc-width" })
 
                         </div>
                     }

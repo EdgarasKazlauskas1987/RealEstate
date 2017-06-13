@@ -212,6 +212,15 @@ namespace RealEstate.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Project project = _projectRepo.Find(id);
+            var listOfImages = _projectRepo.GetImagesWithProjectId(project);
+
+            var listOfStrings = new List<byte[]>();
+            foreach (var item in listOfImages)
+            {
+                listOfStrings.Add(item.ImageData);
+            }
+            ViewBag.ProgList = listOfStrings;
+
             if (project == null)
             {
                 return HttpNotFound();
@@ -224,13 +233,25 @@ namespace RealEstate.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProjectId,TypeOfBuilding,Year,Area,Price,AdditionalInformation")] Project project, IEnumerable<HttpPostedFileBase> images)
+        public ActionResult Edit([Bind(Include = "ProjectId,Title,Address,TypeOfBuilding,Year,Area,PlotArea,NumberOfFloors,NumberOfRooms,Price,AdditionalFacilities,AdditionalInformation")] Project project, IEnumerable<HttpPostedFileBase> images)
         {
             if (ModelState.IsValid)
             {
-                _projectRepo.InsertOrUpdate(project, images);
-               // _projectRepo.Edit(project, images);
+                //_projectRepo.InsertOrUpdate(project, images);
+                _projectRepo.Edit(project, images);
                 return RedirectToAction("Index");
+            } else
+            {
+                var modelErrors = new List<string>();
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var modelError in modelState.Errors)
+                    {
+                        modelErrors.Add(modelError.ErrorMessage);
+                    }
+                }
+                var errors = modelErrors;
+                
             }
             return View(project);
         }

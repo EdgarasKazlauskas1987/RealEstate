@@ -24,25 +24,58 @@ namespace RealEstate.Models.Repositories
             _db.SaveChanges();
         }
 
-      /*  public void Edit(Project project, IEnumerable<HttpPostedFileBase> images)
+     /*   public void Edit(Project project, IEnumerable<HttpPostedFileBase> images)
         {
-            if(images != null)
+            if(images.Count() > 0)
             {
                 var imagesList = new List<Image>();
                 foreach (var image in images)
                 {
-                    using (var br = new BinaryReader(image.InputStream))
+                    if(image != null)
                     {
-                        var data = br.ReadBytes(image.ContentLength);
-                        var img = new Image { ProjectBelongsId = project.ProjectId };
-                        img.ImageData = data;
-                        imagesList.Add(img);
+                        using (var br = new BinaryReader(image.InputStream))
+                        {
+                            var data = br.ReadBytes(image.ContentLength);
+                            var img = new Image { ProjectBelongsId = project.ProjectId };
+                            img.ImageData = data;
+                            imagesList.Add(img);
+                        }
+                    }
+                   
+                }
+                project.Images = imagesList;
+                _db.Entry(project).State = EntityState.Modified;
+            }
+            _db.SaveChanges();
+        }  */
+
+        public void Edit(Project project, IEnumerable<HttpPostedFileBase> images)
+        {
+           
+            if (images.Count() > 0)
+            {
+                var imagesList = new List<Image>();
+                foreach (var image in images)
+                {
+                    if (image != null)
+                    {
+
+                        using (var br = new BinaryReader(image.InputStream))
+                        {
+                            var data = br.ReadBytes(image.ContentLength);
+                            var img = new Image { ProjectBelongsId = project.ProjectId };
+                            img.ImageData = data;
+                            //imagesList.Add(img);
+                            _db.Images.Add(img);
+                        }
                     }
                 }
                 project.Images = imagesList;
                 _db.Entry(project).State = EntityState.Modified;
             }
-        } */
+
+            _db.SaveChanges();
+        }
 
         public void InsertOrUpdate(Project project, IEnumerable<HttpPostedFileBase> images)
         {
@@ -65,6 +98,7 @@ namespace RealEstate.Models.Repositories
                     }
                 }
                 project.Images = imagesList;
+                _db.Entry(project).State = EntityState.Modified;
             }
 
             _db.SaveChanges();
