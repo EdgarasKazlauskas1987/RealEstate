@@ -13,6 +13,7 @@ namespace RealEstate.Models.Repositories
     {
         private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
+        //removing project and images belonging to it
         public void Delete(Project project)
         {
             var Images = _db.Images.Where(x => x.ProjectBelongsId == project.ProjectId);
@@ -21,6 +22,17 @@ namespace RealEstate.Models.Repositories
                 _db.Images.Remove(item);
             }
             _db.Projects.Remove(project);
+            _db.SaveChanges();
+        }
+
+        //removing all images belonging to project
+        public void DeleteImages(int? id)
+        {
+            var Images = _db.Images.Where(x => x.ProjectBelongsId == id);
+            foreach (var image in Images)
+            {
+                _db.Images.Remove(image);
+            }
             _db.SaveChanges();
         }
 

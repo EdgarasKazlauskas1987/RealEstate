@@ -79,6 +79,15 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new images.
+        /// </summary>
+        public static string AddNewImages {
+            get {
+                return ResourceManager.GetString("AddNewImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Address {
@@ -124,6 +133,24 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Project.
+        /// </summary>
+        public static string DeleteProject {
+            get {
+                return ResourceManager.GetString("DeleteProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Project.
+        /// </summary>
+        public static string EditProject {
+            get {
+                return ResourceManager.GetString("EditProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Foto.
         /// </summary>
         public static string Foto {
@@ -156,6 +183,15 @@ namespace RealEstate.Resources.ProjectModelTexts {
         public static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No images uploaded.
+        /// </summary>
+        public static string NoImagesUploaded {
+            get {
+                return ResourceManager.GetString("NoImagesUploaded", resourceCulture);
             }
         }
         
@@ -196,6 +232,15 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove Images.
+        /// </summary>
+        public static string RemoveImages {
+            get {
+                return ResourceManager.GetString("RemoveImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rooms.
         /// </summary>
         public static string Rooms {
@@ -232,11 +277,29 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Uploaded images.
+        /// </summary>
+        public static string UploadedImages {
+            get {
+                return ResourceManager.GetString("UploadedImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Year.
         /// </summary>
         public static string YearBuilt {
             get {
                 return ResourceManager.GetString("YearBuilt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this project?.
+        /// </summary>
+        public static string YouSureWantToDeleteProject {
+            get {
+                return ResourceManager.GetString("YouSureWantToDeleteProject", resourceCulture);
             }
         }
     }

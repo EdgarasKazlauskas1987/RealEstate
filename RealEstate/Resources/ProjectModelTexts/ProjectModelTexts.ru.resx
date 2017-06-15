@@ -123,6 +123,9 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Дополнительная Информация</value>
   </data>
+  <data name="AddNewImages" xml:space="preserve">
+    <value>Добавить новые изображения</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Адрес</value>
   </data>
@@ -138,6 +141,12 @@
   <data name="CreateNewProject" xml:space="preserve">
     <value>Создать новый проект</value>
   </data>
+  <data name="DeleteProject" xml:space="preserve">
+    <value>Удалить Проект</value>
+  </data>
+  <data name="EditProject" xml:space="preserve">
+    <value>Изменить Проект</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Фото</value>
   </data>
@@ -149,6 +158,9 @@
   </data>
   <data name="Images" xml:space="preserve">
     <value>Изображений</value>
+  </data>
+  <data name="NoImagesUploaded" xml:space="preserve">
+    <value>Нет загруженных изображений</value>
   </data>
   <data name="NumberOfFloors" xml:space="preserve">
     <value>Количество этажей</value>
@@ -162,6 +174,9 @@
   <data name="Price" xml:space="preserve">
     <value>Цена</value>
   </data>
+  <data name="RemoveImages" xml:space="preserve">
+    <value>Удалить Изображения</value>
+  </data>
   <data name="Rooms" xml:space="preserve">
     <value>Комнаты</value>
   </data>
@@ -174,7 +189,13 @@
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Тип Здания</value>
   </data>
+  <data name="UploadedImages" xml:space="preserve">
+    <value>Загруженные изображения</value>
+  </data>
   <data name="YearBuilt" xml:space="preserve">
     <value>Год</value>
+  </data>
+  <data name="YouSureWantToDeleteProject" xml:space="preserve">
+    <value>Вы действительно хотите удалить этот проект?</value>
   </data>
 </root>

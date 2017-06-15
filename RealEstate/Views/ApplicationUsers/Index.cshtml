@@ -7,16 +7,14 @@
 <h2>@Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
                                     AdminManagementTexts.ManageUsers)</h2>
 
-<div class="col-md-4">
-    <a class="btn btn-success" id="button-in-admin-main-view" href="@Url.Action("Create", "ApplicationUsers")">
+<div>
+    <a id="button-in-admin-main-view" class="btn btn-success"  href="@Url.Action("Create", "ApplicationUsers")">
         <div class="be-in-middle">
             @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
                                     AdminManagementTexts.CreateNewUser)
         </div>
     </a>
-</div>
-<div class="col-md-4">
-    <a class="btn btn-success" id="button-in-admin-main-view" href="@Url.Action("Index", "Role")">
+    <a id="button-in-admin-main-view"class="btn btn-success" href="@Url.Action("Index", "Role")">
         <div class="be-in-middle">
             @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
                                     AdminManagementTexts.ManageRoles)

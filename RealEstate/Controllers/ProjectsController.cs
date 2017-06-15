@@ -143,6 +143,13 @@ namespace RealEstate.Controllers
             return View(project);
         }
 
+        //deletes images belonging to project
+        public ActionResult DeleteImages(int? id)
+        {
+            _projectRepo.DeleteImages(id);
+            return RedirectToAction("Edit", new { id = id});
+        }
+
         // GET: Projects/Create
         public ActionResult Create()
         {
@@ -204,6 +211,8 @@ namespace RealEstate.Controllers
             return RedirectToAction("Index");
         }
 
+
+
         // GET: Projects/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -219,7 +228,13 @@ namespace RealEstate.Controllers
             {
                 listOfStrings.Add(item.ImageData);
             }
+            //send images data belonging to this project
             ViewBag.ProgList = listOfStrings;
+
+            //send projectId to use for delete images
+            int projectId = project.ProjectId;
+            ViewBag.IdOfProject = projectId;
+            
 
             if (project == null)
             {

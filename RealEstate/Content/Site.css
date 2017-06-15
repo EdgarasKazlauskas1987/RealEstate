@@ -128,10 +128,7 @@ select, textarea:not(.text-area-create-form) {
 
 #button-in-admin-main-view {
     margin:auto;
-    text-align:center;
-    align-items: center;
     padding-top: 30px;
-    display:block;
     height: 85px;
     width: 330px;
 }

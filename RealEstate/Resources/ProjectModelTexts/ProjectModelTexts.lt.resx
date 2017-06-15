@@ -123,6 +123,9 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Papildoma Informacija</value>
   </data>
+  <data name="AddNewImages" xml:space="preserve">
+    <value>Įkelti naujas nuotraukas</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Adresas</value>
   </data>
@@ -138,6 +141,12 @@
   <data name="CreateNewProject" xml:space="preserve">
     <value>Sukurti naują projektą</value>
   </data>
+  <data name="DeleteProject" xml:space="preserve">
+    <value>Ištrinti Projektą</value>
+  </data>
+  <data name="EditProject" xml:space="preserve">
+    <value>Tvarkyti Projektą</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Foto</value>
   </data>
@@ -149,6 +158,9 @@
   </data>
   <data name="Images" xml:space="preserve">
     <value>Nuotraukos</value>
+  </data>
+  <data name="NoImagesUploaded" xml:space="preserve">
+    <value>Nėra įkelta nuotraukų</value>
   </data>
   <data name="NumberOfFloors" xml:space="preserve">
     <value>Aukštų skaičius</value>
@@ -162,6 +174,9 @@
   <data name="Price" xml:space="preserve">
     <value>Kaina</value>
   </data>
+  <data name="RemoveImages" xml:space="preserve">
+    <value>Pašalinti Nuotraukas</value>
+  </data>
   <data name="Rooms" xml:space="preserve">
     <value>Kambariai</value>
   </data>
@@ -174,7 +189,13 @@
   <data name="TypeOfBuilding" xml:space="preserve">
     <value>Pastato Tipas</value>
   </data>
+  <data name="UploadedImages" xml:space="preserve">
+    <value>Įkeltos nuotraukos</value>
+  </data>
   <data name="YearBuilt" xml:space="preserve">
     <value>Metai</value>
+  </data>
+  <data name="YouSureWantToDeleteProject" xml:space="preserve">
+    <value>Ar Jūs tikrai norite ištrinti šitą projektą?</value>
   </data>
 </root>

@@ -35,6 +35,7 @@ namespace RealEstate.Models.Abstract
         Project Find(int? id);
         void InsertOrUpdate(Project project, IEnumerable<HttpPostedFileBase> images);
         void Delete(Project project);
+        void DeleteImages(int? id);
 
         void Edit(Project project, IEnumerable<HttpPostedFileBase> images);
        
