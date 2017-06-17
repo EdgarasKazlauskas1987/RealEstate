@@ -198,4 +198,10 @@
   <data name="YouSureWantToDeleteProject" xml:space="preserve">
     <value>Ar Jūs tikrai norite ištrinti šitą projektą?</value>
   </data>
+  <data name="BackToProjects" xml:space="preserve">
+    <value>Grįžti į projektus</value>
+  </data>
+  <data name="BackToHomePage" xml:space="preserve">
+    <value>į Pagrindinį puslapį</value>
+  </data>
 </root>

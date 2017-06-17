@@ -17,6 +17,9 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\RealEstate.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Helpers.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Mvc.dll
@@ -24,6 +27,8 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.Owin.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
@@ -35,6 +40,9 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\EntityFramework.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\RealEstate.pdb
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Helpers.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Mvc.xml
@@ -42,6 +50,7 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.Owin.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
@@ -51,17 +60,8 @@ C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealE
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\EntityFramework.xml
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\lt\RealEstate.resources.dll
+C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\ru\RealEstate.resources.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\obj\Debug\RealEstate.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\obj\Debug\RealEstate.Tests.dll
 C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\obj\Debug\RealEstate.Tests.pdb
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\lt\RealEstate.resources.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\ru\RealEstate.resources.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Common.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.xml
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Common.xml
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\WebActivatorEx.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Ninject.Web.Mvc.xml
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.dll
-C:\Users\Edgaras\Desktop\Mokslai\Projects\ASP.NET MVC5 Projects\RealEstate\RealEstate.Tests\bin\Debug\Telerik.JustMock.xml

@@ -123,6 +123,9 @@
   <data name="ContactUs" xml:space="preserve">
     <value>CONTACT US</value>
   </data>
+  <data name="ContactUsSmallLetters" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>

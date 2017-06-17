@@ -7,9 +7,9 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink(RealEstate.Resources.LayoutTexts.Hello + " " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink(RealEstate.Resources.LayoutTexts.LayoutTexts.Hello + " " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">@Html.DisplayName(RealEstate.Resources.LayoutTexts.LogOff)</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">@Html.DisplayName(RealEstate.Resources.LayoutTexts.LayoutTexts.LogOff)</a></li>
 
             <li>
                 <a href="@Url.Action("Change", "Languages", new { LanguageAbbrevation = "en" })">
@@ -32,8 +32,8 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.LayoutTexts.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.LayoutTexts.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         <li>
             <a href="@Url.Action("Change", "Languages", new { LanguageAbbrevation = "en" })">
                 <img src="@Url.Content("~/Content/Images/eng.png")" style="border-radius: 50%; width:30px;height:30px;" />

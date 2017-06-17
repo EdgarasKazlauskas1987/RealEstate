@@ -115,6 +115,24 @@ namespace RealEstate.Resources.ProjectModelTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to to Home page.
+        /// </summary>
+        public static string BackToHomePage {
+            get {
+                return ResourceManager.GetString("BackToHomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back to projects.
+        /// </summary>
+        public static string BackToProjects {
+            get {
+                return ResourceManager.GetString("BackToProjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cottage.
         /// </summary>
         public static string Cottage {

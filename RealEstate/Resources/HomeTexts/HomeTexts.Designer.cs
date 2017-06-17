@@ -79,6 +79,15 @@ namespace RealEstate.Resources.HomeTexts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string ContactUsSmallLetters {
+            get {
+                return ResourceManager.GetString("ContactUsSmallLetters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {

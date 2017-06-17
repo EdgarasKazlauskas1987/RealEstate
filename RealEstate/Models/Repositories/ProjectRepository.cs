@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using RealEstate.Models.Abstract;
 using System.IO;
-using System.Collections;
 using System.Data.Entity;
 
 namespace RealEstate.Models.Repositories
@@ -13,7 +12,7 @@ namespace RealEstate.Models.Repositories
     {
         private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
-        //removing project and images belonging to it
+        //Removing project and images belonging to it
         public void Delete(Project project)
         {
             var Images = _db.Images.Where(x => x.ProjectBelongsId == project.ProjectId);
@@ -25,7 +24,7 @@ namespace RealEstate.Models.Repositories
             _db.SaveChanges();
         }
 
-        //removing all images belonging to project
+        //Removing all images belonging to project
         public void DeleteImages(int? id)
         {
             var Images = _db.Images.Where(x => x.ProjectBelongsId == id);
@@ -35,31 +34,6 @@ namespace RealEstate.Models.Repositories
             }
             _db.SaveChanges();
         }
-
-     /*   public void Edit(Project project, IEnumerable<HttpPostedFileBase> images)
-        {
-            if(images.Count() > 0)
-            {
-                var imagesList = new List<Image>();
-                foreach (var image in images)
-                {
-                    if(image != null)
-                    {
-                        using (var br = new BinaryReader(image.InputStream))
-                        {
-                            var data = br.ReadBytes(image.ContentLength);
-                            var img = new Image { ProjectBelongsId = project.ProjectId };
-                            img.ImageData = data;
-                            imagesList.Add(img);
-                        }
-                    }
-                   
-                }
-                project.Images = imagesList;
-                _db.Entry(project).State = EntityState.Modified;
-            }
-            _db.SaveChanges();
-        }  */
 
         public void Edit(Project project, IEnumerable<HttpPostedFileBase> images)
         {
@@ -71,13 +45,11 @@ namespace RealEstate.Models.Repositories
                 {
                     if (image != null)
                     {
-
                         using (var br = new BinaryReader(image.InputStream))
                         {
                             var data = br.ReadBytes(image.ContentLength);
                             var img = new Image { ProjectBelongsId = project.ProjectId };
                             img.ImageData = data;
-                            //imagesList.Add(img);
                             _db.Images.Add(img);
                         }
                     }
@@ -224,9 +196,6 @@ namespace RealEstate.Models.Repositories
             return projects;
         }
 
-
-
-
         public IEnumerable<Project> GetProjectsWithTypeOfBuildingAndYear(string typeOfBuilding, string fromYear, string toYear)
         {
             int year1 = Int32.Parse(fromYear);
@@ -352,7 +321,6 @@ namespace RealEstate.Models.Repositories
         {
            return _db.Images.Where(x => x.ProjectBelongsId == project.ProjectId).ToList();
         }
-
 
     }
 }

@@ -198,4 +198,10 @@
   <data name="YouSureWantToDeleteProject" xml:space="preserve">
     <value>Are you sure you want to delete this project?</value>
   </data>
+  <data name="BackToProjects" xml:space="preserve">
+    <value>Back to projects</value>
+  </data>
+  <data name="BackToHomePage" xml:space="preserve">
+    <value>to Home page</value>
+  </data>
 </root>

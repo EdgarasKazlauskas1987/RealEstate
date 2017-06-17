@@ -16,6 +16,7 @@ namespace RealEstate.Controllers
             return View();
         }
 
+        //GET: change language 
         public ActionResult Change(String LanguageAbbrevation)
         {
             if (LanguageAbbrevation != null)

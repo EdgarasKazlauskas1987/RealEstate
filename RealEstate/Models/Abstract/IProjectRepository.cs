@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace RealEstate.Models.Abstract
@@ -31,7 +27,7 @@ namespace RealEstate.Models.Abstract
         IEnumerable<Project> GetProjectsWithTypeOfBuildingYearAndPrice(string typeOfBuilding, string fromYear, string toYear, string fromPrice, string toPrice);
         IEnumerable<Image> GetAllImages();
         IEnumerable<Image> GetImagesWithProjectId(Project project);
-       // IEnumerable GetAllImages();
+       
         Project Find(int? id);
         void InsertOrUpdate(Project project, IEnumerable<HttpPostedFileBase> images);
         void Delete(Project project);

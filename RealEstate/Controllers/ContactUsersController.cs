@@ -14,12 +14,13 @@ namespace RealEstate.Controllers
     public class ContactUsersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        // GET: ContactUsers
+        // GET: List of all users
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
+        //GET: get's view with users 
         public ActionResult SendEmails()
         {
             var listOfImages = db.Users;
@@ -29,12 +30,13 @@ namespace RealEstate.Controllers
             {
                 usersEmails.Add(item.Email);  
             }
-            //ViewBag.UsersEmails = usersEmails;
+            
            ViewBag.UsersEmails = new SelectList(usersEmails);
             
             return View();
         }
 
+        //POST: sends email to selected user
         [HttpPost]
         public async Task<ActionResult> SendEmails(SendEmail viewModel)
         {
@@ -48,8 +50,7 @@ namespace RealEstate.Controllers
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress(viewModel.ToEmail));
-                //message.To.Add(new MailAddress("edgarasvilija@gmail.com"));// replace with valid value 
+                message.To.Add(new MailAddress(viewModel.ToEmail)); 
                 message.From = new MailAddress("sender@outlook.com");  // replace with valid value
                 message.Subject = "Your email subject";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
@@ -78,12 +79,5 @@ namespace RealEstate.Controllers
             return View();
         }
 
-
-        /*
-                [HttpPost]
-                public ActionResult Index(List<String> emails)
-                {
-                    return View();
-                } */
     }
 }

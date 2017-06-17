@@ -326,17 +326,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeTexts.ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\LayoutTexts.Designer.cs">
+    <Compile Include="Resources\LayoutTexts\LayoutTexts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LayoutTexts.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\LayoutTexts.lt.Designer.cs">
+    <Compile Include="Resources\LayoutTexts\LayoutTexts.lt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LayoutTexts.lt.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\LayoutTexts.ru.Designer.cs">
+    <Compile Include="Resources\LayoutTexts\LayoutTexts.ru.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LayoutTexts.ru.resx</DependentUpon>
@@ -391,10 +391,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\background.jpg" />
-    <Content Include="Content\Images\background1.jpg" />
-    <Content Include="Content\Images\background3.jpg" />
-    <Content Include="Content\Images\background4.jpg" />
     <Content Include="Content\Images\buildings1.jpg" />
     <Content Include="Content\Images\buildings2.jpg" />
     <Content Include="Content\Images\buildings3.jpg" />
@@ -403,14 +399,10 @@
     <Content Include="Content\Images\eng.png" />
     <Content Include="Content\Images\F05JSPD.png" />
     <Content Include="Content\Images\green-circle.png" />
-    <Content Include="Content\Images\inquirybackground.jpg" />
     <Content Include="Content\Images\lt.png" />
     <Content Include="Content\Images\no-house-image-available.jpg" />
     <Content Include="Content\Images\ru.png" />
     <Content Include="Content\Images\services.jpg" />
-    <Content Include="Content\Images\turnRight.png" />
-    <Content Include="Content\Images\turnright1.png" />
-    <Content Include="Content\Images\turnright2.png" />
     <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -478,7 +470,6 @@
     <Content Include="Views\Role\AssignRoleToUser.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Shared\_AdminFooter.cshtml" />
     <Content Include="Views\ApplicationUsers\Create.cshtml" />
     <Content Include="Views\ApplicationUsers\Delete.cshtml" />
     <Content Include="Views\ApplicationUsers\Details.cshtml" />
@@ -487,7 +478,6 @@
     <Content Include="Views\Services\Index.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
     <Content Include="Views\ContactUsers\Index.cshtml" />
-    <Content Include="Views\ContactUsers\SendMessages.cshtml" />
     <Content Include="Views\ContactUsers\SendEmails.cshtml" />
     <Content Include="Views\ContactUsers\Sent.cshtml" />
   </ItemGroup>
@@ -570,15 +560,15 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>HomeTexts.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\LayoutTexts.lt.resx">
+    <EmbeddedResource Include="Resources\LayoutTexts\LayoutTexts.lt.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LayoutTexts.lt.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\LayoutTexts.resx">
+    <EmbeddedResource Include="Resources\LayoutTexts\LayoutTexts.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LayoutTexts.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\LayoutTexts.ru.resx">
+    <EmbeddedResource Include="Resources\LayoutTexts\LayoutTexts.ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LayoutTexts.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>

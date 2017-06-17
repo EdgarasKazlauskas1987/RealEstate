@@ -41,8 +41,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><img id="company-logo" src="@Url.Content("~/Content/Images/CompanyLogo.png")"/></li>
-                        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.Home, "Index", "Home")</li>
-                        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.Contact, "Contact", "Home")</li>
+                        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.LayoutTexts.Home, "Index", "Home")</li>
+                        <li>@Html.ActionLink(RealEstate.Resources.LayoutTexts.LayoutTexts.Contact, "Contact", "Home")</li>
 
                         @if (ViewContext.HttpContext.User.IsInRole("Admin"))
                         {

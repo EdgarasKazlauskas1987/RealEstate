@@ -198,4 +198,10 @@
   <data name="YouSureWantToDeleteProject" xml:space="preserve">
     <value>Вы действительно хотите удалить этот проект?</value>
   </data>
+  <data name="BackToProjects" xml:space="preserve">
+    <value>Вернуться к проектам</value>
+  </data>
+  <data name="BackToHomePage" xml:space="preserve">
+    <value>Главную страницу</value>
+  </data>
 </root>

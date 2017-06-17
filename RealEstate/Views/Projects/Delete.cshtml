@@ -46,9 +46,19 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value= "Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div style="margin-top:30px;">
+            <div style="display:inline">
+                <a class="btn btn-primary" href="@Url.Action("Index", "Projects")">
+                    <div class="be-in-middle">
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                        @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.
+                                     ProjectModelTexts.BackToProjects)
+                    </div>
+                </a>
+            </div>
+            <div style="display:inline">
+                <input type="submit" value="Delete" class="btn btn-success edit-view-save-button" />
+            </div> 
         </div>
     }
 </div>

@@ -51,5 +51,25 @@
     <div class="col-md-8" id="service-image-container">
         <img src="~/Content/Images/services.jpg" alt="" width="730" height="450" />
     </div>
+
+    <div style="margin-top: auto">
+        <div style="display:inline">
+            <a class="btn btn-primary" href="@Url.Action("Index", "Home")">
+                <div class="be-in-middle">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.
+                                     ProjectModelTexts.BackToHomePage)
+                </div>
+            </a>
+        </div>
+        <div style="display:inline">
+            <a class="btn btn-success" href="@Url.Action("InquiryForm", "Home")">
+                <div class="be-in-middle">
+                    @Html.DisplayName(RealEstate.Resources.HomeTexts.
+                                     HomeTexts.ContactUsSmallLetters)
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 

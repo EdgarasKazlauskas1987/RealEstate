@@ -9,30 +9,33 @@ using System.Web.Mvc;
 
 namespace RealEstate.Controllers
 {
+    [Authorize]
     public class RoleController : Controller
     {
+        //Roles repository
         private readonly IRoleRepository _projectRepo;
 
+        //Dependency injection
         public RoleController(IRoleRepository repo)
         {
             this._projectRepo = repo;
         }
 
-        // GET: all roles
+        // GET: All roles
         public ActionResult Index()
         {
             var Roles = _projectRepo.GetAll();
             return View(Roles);
         }
 
-        //GET: create a new role
+        //GET: Create a new role
         public ActionResult Create()
         {
             var Role = new IdentityRole();
             return View(Role);
         }
 
-        //POST: create a new role
+        //POST: Create a new role
         [HttpPost]
         public ActionResult Create(IdentityRole Role)
         {
@@ -40,36 +43,5 @@ namespace RealEstate.Controllers
             return RedirectToAction("Index");
         }
 
-        //NOT USING REPOSITORY (OLD)
-        /*
-        ApplicationDbContext context;
-
-        public RoleController()
-        {
-            context = new ApplicationDbContext();
-        }
-
-        // GET: all roles
-        public ActionResult Index()
-        {
-            var Roles = context.Roles.ToList();
-            return View(Roles);
-        }
-        
-        //GET: create a new role
-        public ActionResult Create()
-        {
-            var Role = new IdentityRole();
-            return View(Role);
-        }
-
-        //POST: create a new role
-        [HttpPost]
-        public ActionResult Create(IdentityRole Role)
-        {
-            context.Roles.Add(Role);
-            context.SaveChanges();
-            return RedirectToAction("Index");
-        } */
     } 
 }

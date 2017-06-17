@@ -16,6 +16,7 @@ namespace RealEstate.Controllers
 
         private Random randomGenerator = new Random();
 
+        //GET: Home page
         public ActionResult Index()
         {
             IEnumerable<Project> demo = db.Projects;
@@ -39,13 +40,7 @@ namespace RealEstate.Controllers
             return View();
         } 
        
-        public ActionResult InquiryForm()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
+        //GET: Contacts view
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -53,6 +48,14 @@ namespace RealEstate.Controllers
             return View();
         }
 
+        //GET: Inquiry form
+        public ActionResult InquiryForm()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        //POST: User sends Inquiry form to company
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> InquiryForm(InquiryFormModel model)
@@ -84,6 +87,8 @@ namespace RealEstate.Controllers
             }
             return View(model);
         }
+
+        //GET: Message sent confirmation view
         public ActionResult Sent()
         {
             return View();

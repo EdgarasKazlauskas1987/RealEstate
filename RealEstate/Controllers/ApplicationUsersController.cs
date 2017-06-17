@@ -10,6 +10,7 @@ using RealEstate.Models;
 
 namespace RealEstate.Controllers
 {
+    [Authorize]
     public class ApplicationUsersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

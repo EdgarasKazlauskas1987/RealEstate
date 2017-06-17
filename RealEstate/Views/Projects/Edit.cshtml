@@ -10,7 +10,7 @@
 @using (Html.BeginForm("Edit", "Projects", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -103,50 +103,55 @@
             </div>
         </div>
 
-        @{
+        <div class="row">
+            <div class="col-md-6">
+                @{
+                    var pictures = ViewBag.ProgList;
 
-            var pictures = ViewBag.ProgList;
+                    if (pictures.Count != 0)
+                    {
+                        <h2>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.UploadedImages)</h2>
 
-            if (pictures.Count != 0)
-            {
-                <h2>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.UploadedImages)</h2>
+                        foreach (var item in ViewBag.ProgList)
+                        {
+                            var base64 = Convert.ToBase64String(item);
+                            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                            <div>
+                                <img src='@imgSrc' width="300" height="200" /> <br />
+                            </div>
+                        }
 
-                foreach (var item in ViewBag.ProgList)
-                {
-                    var base64 = Convert.ToBase64String(item);
-                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-                        <div>
-                                <img src='@imgSrc' width="300" height="200" /> <br/>   
+                        <div style="width: 80px; margin-top: 10px">
+                            @Html.ActionLink(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.RemoveImages, "DeleteImages", new { id = ViewBag.IdOfProject }, new { @class = "btn btn-primary btn-large" })
                         </div>
+                    }
+                    else
+                    {
+                        <h2>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NoImagesUploaded)</h2>
+                    }
+
+
+                    /* <div class="form-group"></div>
+                     <input onchange="loadFile1(event)"  type="file" name="images" id="file" />
+                     <img id="output10" width="200" height="150" src="@pictures.ElementAt(0)" /> */
                 }
+            </div>
 
-                <div style="width: 80px; margin-top: 10px">
-                    @Html.ActionLink(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.RemoveImages, "DeleteImages", new { id = ViewBag.IdOfProject }, new { @class = "btn btn-primary btn-large" })
+            <div class="col-md-6">
+                <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AddNewImages)</h3>
+                <div class="form-group">
+                    <input onchange="loadFile1(event)" type="file" name="images" id="file" />
+                    <img id="output1" width="300" height="200" />
                 </div>
-            }
-            else
-            {
-                <h2>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.NoImagesUploaded)</h2>
-            }
-
-
-            /* <div class="form-group"></div>
-             <input onchange="loadFile1(event)"  type="file" name="images" id="file" />
-             <img id="output10" width="200" height="150" src="@pictures.ElementAt(0)" /> */
-        }
-
-       <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AddNewImages)</h3>
-        <div class="form-group">
-            <input onchange="loadFile1(event)" type="file" name="images" id="file" />
-            <img id="output1" width="300" height="200" />
-        </div>
-        <div class="form-group">
-            <input onchange="loadFile2(event)" type="file" name="images" id="file" />
-            <img id="output2" width="300" height="200" />
-        </div>
-        <div class="form-group">
-            <input onchange="loadFile3(event)" type="file" name="images" id="file" />
-            <img id="output3" width="300" height="200" />
+                <div class="form-group">
+                    <input onchange="loadFile2(event)" type="file" name="images" id="file" />
+                    <img id="output2" width="300" height="200" />
+                </div>
+                <div class="form-group">
+                    <input onchange="loadFile3(event)" type="file" name="images" id="file" />
+                    <img id="output3" width="300" height="200" />
+                </div>
+            </div>
         </div>
 
         <script>
@@ -165,23 +170,23 @@
                 output3.src = URL.createObjectURL(event.target.files[0]);
             };
         </script>
-        
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+
+        <div style="margin-top:30px;">
+            <div style="display:inline">
+                <a class="btn btn-primary" href="@Url.Action("Index", "Projects")">
+                    <div class="be-in-middle">
+                        <span class="glyphicon glyphicon-arrow-left"></span> 
+                        @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.
+                                     ProjectModelTexts.BackToProjects)
+                    </div>
+                </a>
             </div>
-            <div>
-                @Html.ActionLink("Back to List", "Index")
+            <div style="display:inline">
+                <input type="submit" value="Save" class="btn btn-success edit-view-save-button" />
             </div>
         </div>
-        <a class="btn btn-success" href="@Url.Action("Index", "Projects")">
-            <div class="be-in-middle">
-                @Html.DisplayName(RealEstate.Resources.AdminManagementTexts.
-                                     AdminManagementTexts.ContactUsers)
-            </div>
-        </a>
-        
+
     </div>
             }
 

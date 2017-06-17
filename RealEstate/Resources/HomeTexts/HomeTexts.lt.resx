@@ -123,6 +123,9 @@
   <data name="ContactUs" xml:space="preserve">
     <value>SUSISIEKITE</value>
   </data>
+  <data name="ContactUsSmallLetters" xml:space="preserve">
+    <value>Susisiekite</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Ištrinti</value>
   </data>

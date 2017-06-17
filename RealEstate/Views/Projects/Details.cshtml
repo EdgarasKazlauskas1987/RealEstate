@@ -126,12 +126,26 @@
         <h3>@Html.DisplayName(RealEstate.Resources.ProjectModelTexts.ProjectModelTexts.AdditionalInformation)</h3>
         <article>@Html.DisplayFor(model => model.AdditionalInformation)</article>
 
-        
-
     </div>
     
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div style="margin-top:30px;">
+    <div style="display:inline">
+        <a class="btn btn-primary" href="@Url.Action("Index", "Projects")">
+            <div class="be-in-middle">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.
+                                     ProjectModelTexts.BackToProjects)
+            </div>
+        </a>
+    </div>
+    <div style="display:inline">
+        <a class="btn btn-success" href="@Url.Action("Edit", "Projects", new { id = Model.ProjectId } )">
+            <div class="be-in-middle">
+                @Html.DisplayName(RealEstate.Resources.HomeTexts.
+                                     HomeTexts.Edit)
+            </div>
+        </a>
+    </div>
+</div>

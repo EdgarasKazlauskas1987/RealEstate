@@ -32,6 +32,15 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
+            <div style="display:inline">
+                <a class="btn btn-primary" href="@Url.Action("Index", "Home")">
+                    <div>
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                        @Html.DisplayName(RealEstate.Resources.ProjectModelTexts.
+                                     ProjectModelTexts.BackToHomePage)
+                    </div>
+                </a>
+            </div>
             <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-envelope"></span> 
                 @Html.DisplayName(RealEstate.Resources.ContactsTexts.ContactsTexts.Send) 
             </button>
