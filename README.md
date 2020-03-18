@@ -12,11 +12,9 @@ of `cookies`the application remembers which language was used during the last vi
  
 ![alt text](RealEstate/Content/Screenshots/HomePage.png "Home Page")
 
-![alt text](RealEstate/Content/Screenshots/SearchForProject.png "Search for Project")
+![alt text](RealEstate/Content/Screenshots/SearchForProjects.png "Search for Projects")
 
 ![alt text](RealEstate/Content/Screenshots/ProjectExample.png "Project Example")
-
-![alt text](RealEstate/Content/Screenshots/Contacts.png "Contacts")
 
 ## Technologies used
 
